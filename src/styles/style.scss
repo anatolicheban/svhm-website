@@ -1,20 +1,175 @@
-@import "normalize";
-@import "fonts";
+@import "./normalize.scss";
+@import "./fonts.scss";
 
-header.header {
+$primary-color: #191A1A;
+$secondary-color: #FFFCF8;
+
+* {
+  box-sizing: border-box;
 }
 
-footer.footer {
+html,
+body {
+  height: 100%;
+  font-family: "Proba Pro", sans-serif;
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+  appearance: none;
+  color: #fff;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .content-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+header.header {
+  background-color: $primary-color;
+  display: flex;
+  width: 100%;
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    padding: 32px 0;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .nav-list {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+
+      &__item {
+        font-size: 1.125rem;
+        line-height: 24px;
+        list-style: none;
+
+        a {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    .button-container {
+
+      &__button {
+        font-size: 1.125rem;
+        line-height: 24px;
+        color: $secondary-color;
+        background: transparent;
+        padding: 10px 35px;
+        border-radius: 300px;
+        border: 1px solid $secondary-color;
+      }
+
+    }
+  }
 }
 
 main.main {
+  flex: 1 1 auto;
+  background: $secondary-color;
 }
 
-@import "index";
-@import "about";
+footer.footer {
+  background-color: $primary-color;
+
+  .container {
+    display: flex;
+    margin-top: 60px;
+    padding-bottom: 66px;
+    justify-content: space-between;
+  }
+
+  .right-side {
+    display: flex;
+    gap: 120px;
+
+    .footer-nav-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .nav-menu {
+        display: flex;
+
+        .nav-list {
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          &__item {
+            font-size: 1rem;
+            line-height: 24px;
+            list-style: none;
+
+            a {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+
+      .social-links {
+        display: flex;
+        gap: 24px;
+      }
+    }
+
+    .footer-contacts {
+      display: flex;
+      gap: 24px;
+      color: $secondary-color;
+      flex-direction: column;
+
+      &__title {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &__item {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+@import "./index.scss";
+@import "./about.scss";
