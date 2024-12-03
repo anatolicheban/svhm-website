@@ -3,7 +3,6 @@
 
 main.main {
 
-
   .contact-us {
 
     padding: 71px 0 79px 0;
@@ -60,6 +59,10 @@ main.main {
           font-size: 1.75rem;
           line-height: 140%;
           outline: none;
+        }
+
+        textarea {
+          resize: none;
         }
 
         &__button {

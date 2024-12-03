@@ -3,6 +3,7 @@
 
 $primary-color: #191A1A;
 $secondary-color: #FFFCF8;
+$blue-color: #0030F4;
 
 * {
   box-sizing: border-box;
@@ -96,6 +97,68 @@ header.header {
 main.main {
   flex: 1 1 auto;
   background: $secondary-color;
+
+  .newsletter {
+
+    padding: 107px 0;
+    background: $blue-color;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .newsletter-box {
+
+      display: flex;
+      align-items: center;
+      gap: 152px;
+
+      &__title {
+        font-size: 3.5rem;
+        line-height: 66px;
+        font-weight: bold;
+        color: $secondary-color;
+      }
+
+      .newsletter-form {
+        display: flex;
+        border-radius: 66px;
+        background: $secondary-color;
+        padding: 26px 30px 26px 80px;
+        gap: 70px;
+
+        label {
+          outline: none;
+          border: none;
+        }
+
+        &__email {
+          font-size: 2rem;
+          color: rgba(25, 26, 26, 0.5);
+          line-height: 44px;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+
+        &__button {
+          font-size: 1.125rem;
+          color: $primary-color;
+          line-height: 24px;
+          padding: 10px 35px;
+          outline: none;
+          border: 1px solid $primary-color;
+          cursor: pointer;
+          background: transparent;
+          border-radius: 300px;
+        }
+
+      }
+    }
+
+
+  }
 }
 
 footer.footer {
