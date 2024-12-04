@@ -1,9 +1,9 @@
 @import "./normalize.scss";
 @import "./fonts.scss";
 
-$primary-color: #191A1A;
-$secondary-color: #FFFCF8;
-$blue-color: #0030F4;
+$primary-color: #191a1a;
+$secondary-color: #fffcf8;
+$blue-color: #0030f4;
 
 * {
   box-sizing: border-box;
@@ -35,9 +35,9 @@ button {
 }
 
 .container {
-  max-width: 1550px;
+  max-width: 1614px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 32px;
 }
 
 header.header {
@@ -79,7 +79,6 @@ header.header {
     }
 
     .button-container {
-
       &__button {
         font-size: 1.125rem;
         line-height: 24px;
@@ -89,7 +88,6 @@ header.header {
         border-radius: 300px;
         border: 1px solid $secondary-color;
       }
-
     }
   }
 }
@@ -99,7 +97,6 @@ main.main {
   background: $secondary-color;
 
   .newsletter {
-
     padding: 107px 0;
     background: $blue-color;
 
@@ -109,7 +106,6 @@ main.main {
     }
 
     .newsletter-box {
-
       display: flex;
       align-items: center;
       gap: 152px;
@@ -153,11 +149,8 @@ main.main {
           background: transparent;
           border-radius: 300px;
         }
-
       }
     }
-
-
   }
 }
 
@@ -229,10 +222,7 @@ footer.footer {
       }
     }
   }
-
 }
-
-
 
 @import "./index.scss";
 @import "./about.scss";
