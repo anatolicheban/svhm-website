@@ -1,8 +1,17 @@
 @font-face {
   font-family: "Proba Pro";
   src:
-    url("../fonts/ProbaPro/probapro.css") format("css"),
-    url("../fonts/Probapro/Probaproitalic.woff") format("woff");
+    url("../fonts/ProbaPro/stylesheet.css") format("css"),
+    url("../fonts/Probapro/ProbaPro-Regular.woff") format("woff");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proba Pro";
+  src:
+          url("../fonts/ProbaPro/stylesheet.css") format("css"),
+          url("../fonts/Probapro/ProbaPro-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
 }

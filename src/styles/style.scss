@@ -96,6 +96,83 @@ main.main {
   flex: 1 1 auto;
   background: $secondary-color;
 
+  .contact-us {
+    padding: 71px 0 79px 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contacts-left-side {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: $primary-color;
+
+      &__title {
+        font-size: 3.5rem;
+        line-height: 66px;
+        font-weight: bold;
+      }
+
+      &__text {
+        font-size: 2rem;
+        line-height: 44px;
+      }
+    }
+
+    .contacts-right-side {
+      border: 1px solid $primary-color;
+      padding: 28.5px 32px;
+      border-radius: 25px;
+      max-width: 736px;
+      width: 100%;
+
+      .contacts-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+          outline: none;
+          border: none;
+        }
+
+        &__item {
+          width: 100%;
+          padding: 17px 20px;
+          border: none;
+          border-bottom: 1px solid $primary-color;
+          background: transparent;
+          color: rgba(25, 26, 26, 0.5);
+          font-size: 1.75rem;
+          line-height: 140%;
+          outline: none;
+        }
+
+        textarea {
+          resize: none;
+        }
+
+        &__button {
+          outline: none;
+          color: $primary-color;
+          background: transparent;
+          border: 1px solid $primary-color;
+          cursor: pointer;
+          padding: 10px 0;
+          font-size: 1.5rem;
+          line-height: 34px;
+          border-radius: 300px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
   .newsletter {
     padding: 107px 0;
     background: $blue-color;
@@ -122,7 +199,9 @@ main.main {
         border-radius: 66px;
         background: $secondary-color;
         padding: 26px 30px 26px 80px;
-        gap: 70px;
+        justify-content: space-between;
+        max-width: 772px;
+        width: 100%;
 
         label {
           outline: none;
@@ -197,6 +276,10 @@ footer.footer {
       .social-links {
         display: flex;
         gap: 24px;
+
+        &__item {
+          display: block;
+        }
       }
     }
 
@@ -216,9 +299,37 @@ footer.footer {
         flex-direction: column;
         gap: 20px;
 
-        &__item {
-          font-size: 1rem;
+        a {
+          &:first-child {
+            text-transform: uppercase;
+          }
         }
+      }
+
+
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  main.main {
+    .contact-us {
+      .container {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  main.main {
+    .contact-us {
+      .contacts-left-side {
+        text-align: center;
+      }
+      .container {
+        flex-direction: column;
+        gap: 100px;
       }
     }
   }
