@@ -4,9 +4,9 @@
 $primary-color: #191a1a;
 $secondary-color: #fffcf8;
 $blue-color: #0030f4;
-$red-color: #F55000;
-$orange-color: #F8B015;
-$yellow-color: #F4E108;
+$red-color: #f55000;
+$orange-color: #f8b015;
+$yellow-color: #f4e108;
 
 * {
   box-sizing: border-box;
@@ -55,9 +55,10 @@ header.header {
     justify-content: space-between;
   }
 
-  .logo-container {
+  .logo-link {
     padding: 35.83px 0;
     cursor: pointer;
+    display: block;
   }
 
   .nav-menu {
@@ -256,7 +257,6 @@ main.main {
             opacity: 40%;
           }
         }
-
       }
     }
   }
@@ -337,8 +337,6 @@ footer.footer {
           }
         }
       }
-
-
     }
   }
 }
@@ -354,7 +352,6 @@ footer.footer {
         gap: 100px;
       }
     }
-
   }
 }
 
@@ -372,8 +369,6 @@ footer.footer {
     }
   }
 }
-
-
 
 @import "./index.scss";
 @import "./about.scss";
