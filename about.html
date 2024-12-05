@@ -2,9 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/svhm-website/images/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About</title>
     <script type="module" crossorigin src="/svhm-website/assets/main-CqQ3lzDy.js"></script>
     <link rel="stylesheet" crossorigin href="/svhm-website/assets/main-DvfJYgfb.css">
   </head>
@@ -31,6 +34,53 @@
         </div>
       </header>
       <main class="main">
+        <section class="contact-us">
+          <div class="container">
+            <div class="contacts-left-side">
+              <h2 class="contacts-left-side__title">ЗАЦІКАВИЛИ?</h2>
+              <p class="contacts-left-side__text">
+                Заповнюй форму і ми сконтактуємо з тобою найближчим часом.
+              </p>
+            </div>
+            <div class="contacts-right-side">
+              <form class="contacts-form">
+                <label for="name">
+                  <input
+                    class="contacts-form__item"
+                    name="name"
+                    id="name"
+                    type="text"
+                    placeholder="Ваше ім'я"
+                  />
+                </label>
+                <label for="phone">
+                  <input
+                    class="contacts-form__item"
+                    name="name"
+                    id="phone"
+                    type="text"
+                    placeholder="+38 (000) 000 00 00"
+                  />
+                </label>
+                <label for="question">
+                  <textarea
+                    class="contacts-form__item"
+                    rows="1"
+                    cols="1"
+                    id="question"
+                    name="question"
+                    placeholder="Ваше питання"
+                  ></textarea>
+                </label>
+                <input
+                  class="contacts-form__button"
+                  value="ЗВ'ЯЗАТИСЬ З НАМИ"
+                  type="submit"
+                />
+              </form>
+            </div>
+          </div>
+        </section>
         <section class="newsletter">
           <div class="container">
             <div class="newsletter-box">
