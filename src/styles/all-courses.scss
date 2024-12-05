@@ -38,8 +38,19 @@ main.main {
           color: $primary-color;
           border: 1px solid $primary-color;
           border-radius: 200px;
-          padding: 16px 34px;
+          padding: 15.5px 34px;
           background: transparent;
+          transition: 0.6s all;
+
+          &:hover {
+            background: $blue-color;
+            border-color: $secondary-color;
+            color: $secondary-color;
+          }
+
+          &.disabled {
+            opacity: 40%;
+          }
         }
       }
 
@@ -62,7 +73,7 @@ main.main {
           .courses-list-card-left-side {
             max-width: 556px;
             width: 100%;
-            padding: 50px 150px 50px 50px;
+            padding: 50px;
             background: $primary-color;
             border-radius: 50px;
 
@@ -75,6 +86,9 @@ main.main {
             }
 
             &__title {
+              word-wrap: break-word;
+              overflow-wrap: break-word;
+              hyphens: auto;
               font-size: 3.375rem;
               line-height: 59.4px;
               font-weight: 700;
@@ -98,8 +112,8 @@ main.main {
             }
 
             &__button {
-              background: $secondary-color;
-              color: $primary-color;
+              background: transparent;
+              color: $secondary-color;
               padding: 15px 35px;
               font-size: 1.125rem;
               line-height: 19.8px;
@@ -107,13 +121,25 @@ main.main {
               transition: 0.6s all;
               margin-top: 65px;
               border-radius: 300px;
-              border: 1px solid $primary-color;
+              border: 1px solid $secondary-color;
+
+              &:hover {
+                background: $secondary-color;
+                color: $primary-color;
+              }
+
+              &.disabled {
+                opacity: 40%;
+              }
             }
 
           }
 
           .courses-list-card-right-side {
-            padding: 116px 50px 67px 0;
+
+            padding: 116px 67px 116px 0;
+            display: flex;
+            align-items: center;
 
             &__text {
               max-width: 537px;
