@@ -4,7 +4,6 @@
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/images/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="./src/styles/style.scss"/>
     <title>Vite + TS</title>
 </head>
 <body>
@@ -30,6 +29,326 @@
         </div>
     </header>
     <main class="main">
+        <section class="hero-section">
+            <div class="container">
+                <div class="left-side">
+                    <h1 class="left-side__title">ВИЩА ШКОЛА МАРКЕЙТИНГУ</h1>
+                    <p class="left-side__text">Інтенсивні та практичні курси для швидкого професійного зростання в
+                        маркетингу. Ми об'єднали сучасні знання та досвід експертів, щоб допомогти вам закрити ключові
+                        прогалини та підготуватися до актуальних викликів ринку.</p>
+                    <button class="left-side__button">ДОКЛАДНІШЕ</button>
+                    <div class="left-side-social-links">
+                        <a href="#" class="left-side-social-links__item">
+                            <img
+                                    src="public/images/icons/fb-icon.svg"
+                                    alt="facebook-link"
+                            />
+                        </a>
+                        <a href="#" class="left-side-social-links__item">
+                            <img
+                                    src="public/images/icons/inst-icon.svg"
+                                    alt="youtube-link"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <img src="./public/images/hero-section-image.svg" alt="main-image">
+                </div>
+            </div>
+        </section>
+        <section class="events">
+            <div class="container">
+                <div class="events-slider">
+                    <div class="slider">
+                        <div class="slider-card">
+                            <div class="card-info">
+                                <img src="./public/images/event-card-logo.svg" alt="card-logo">
+                                <h2 class="card-info__title">НАЗВА ІВЕНТУ</h2>
+                                <p class="card-info__text">онлайн | 20.01.2025</p>
+                                <button class="card-info__button">ДОКЛАДНІШЕ</button>
+                            </div>
+                            <div class="card-poster">
+                                <img src="./public/images/card-poster.svg" alt="card-poster">
+                            </div>
+                        </div>
+                        <div class="slider-pagination">
+                            <div class="pagination-buttons">
+                                <button
+                                        class="pagination-buttons__button pagination-buttons__button_prev"
+                                >
+                                    <img
+                                            class="button-arrow-icon"
+                                            src="./public/images/right-arrow-button-small.svg"
+                                            alt="prev-slide"
+                                    />
+                                </button>
+                                <div class="pagination-dots">
+                                    <span class="pagination-dots__item event-item"></span>
+                                    <span class="pagination-dots__item event-item active"></span>
+                                    <span class="pagination-dots__item event-item"></span>
+                                </div>
+                                <button class="pagination-buttons__button pagination-buttons__button_next">
+                                    <img
+                                            class="button-arrow-icon"
+                                            src="./public/images/right-arrow-button-small.svg"
+                                            alt="next-slide"
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-info">
+                    <h2 class="event-info__title">ІВЕНТИ</h2>
+                    <p class="event-info__text">Інтенсивні та практичні курси для швидкого професійного зростання в
+                        маркетингу. Ми об'єднали сучасні знання та досвід експертів, щоб допомогти вам закрити ключові
+                        прогалини та підготуватися до актуальних викликів ринку. Інтенсивні та практичні курси для
+                        швидкого професійного зростання в маркетингу. Ми об'єднали сучасні знання та досвід
+                        експертів.</p>
+                </div>
+            </div>
+        </section>
+        <section class="our-courses">
+            <div class="container">
+                <h1 class="our-courses__title">НАШІ КУРСИ</h1>
+                <div class="courses">
+                    <div class="buttons-box">
+                        <button class="buttons-box__button">#SMM</button>
+                        <button class="buttons-box__button">#Branding</button>
+                    </div>
+                    <div class="courses-list">
+                        <div class="courses-list-card">
+                            <div class="courses-list-card-left-side">
+                                <h3 class="courses-list-card-left-side__number">#1</h3>
+                                <h3 class="courses-list-card-left-side__title">
+                                    НАЗВА КУРСУ
+                                </h3>
+                                <p class="courses-list-card-left-side__text">
+                                    12 відео уроків
+                                </p>
+                                <p class="courses-list-card-left-side__price">1999₴</p>
+                                <button class="courses-list-card-left-side__button">
+                                    ДОКЛАДНІШЕ
+                                </button>
+                            </div>
+                            <div class="courses-list-card-right-side">
+                                <p class="courses-list-card-right-side__text">
+                                    Інтенсивні та практичні курси для швидкого професійного
+                                    зростання в маркетингу. Ми об'єднали сучасні знання та
+                                    досвід експертів, щоб допомогти вам закрити ключові
+                                    прогалини та підготуватися до актуальних викликів ринку.
+                                    Інтенсивні та практичні курси для швидкого професійного
+                                    зростання в маркетингу. Ми об'єднали сучасні знання та
+                                    досвід експертів.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="courses-list-card">
+                            <div class="courses-list-card-left-side">
+                                <h3 class="courses-list-card-left-side__number">#2</h3>
+                                <h3 class="courses-list-card-left-side__title">
+                                    НАЗВА КУРСУ
+                                </h3>
+                                <p class="courses-list-card-left-side__text">
+                                    12 відео уроків
+                                </p>
+                                <p class="courses-list-card-left-side__price">1500₴</p>
+                                <button class="courses-list-card-left-side__button">
+                                    ДОКЛАДНІШЕ
+                                </button>
+                            </div>
+                            <div class="courses-list-card-right-side">
+                                <p class="courses-list-card-right-side__text">
+                                    Інтенсивні та практичні курси для швидкого професійного
+                                    зростання в маркетингу. Ми об'єднали сучасні знання та
+                                    досвід експертів, щоб допомогти вам закрити ключові
+                                    прогалини та підготуватися до актуальних викликів ринку.
+                                    Інтенсивні та практичні курси для швидкого професійного
+                                    зростання в маркетингу. Ми об'єднали сучасні знання та
+                                    досвід експертів.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="courses-list-card">
+                            <div class="courses-list-card-left-side">
+                                <h3 class="courses-list-card-left-side__number">#3</h3>
+                                <h3 class="courses-list-card-left-side__title">
+                                    НАЗВА КУРСУ
+                                </h3>
+                                <p class="courses-list-card-left-side__text">
+                                    12 відео уроків
+                                </p>
+                                <p class="courses-list-card-left-side__price">2000₴</p>
+                                <button class="courses-list-card-left-side__button">
+                                    ДОКЛАДНІШЕ
+                                </button>
+                            </div>
+                            <div class="courses-list-card-right-side">
+                                <p class="courses-list-card-right-side__text">
+                                    Інтенсивні та практичні курси для швидкого професійного
+                                    зростання в маркетингу. Ми об'єднали сучасні знання та
+                                    досвід експертів, щоб допомогти вам закрити ключові
+                                    прогалини та підготуватися до актуальних викликів ринку.
+                                    Інтенсивні та практичні курси для швидкого професійного
+                                    зростання в маркетингу. Ми об'єднали сучасні знання та
+                                    досвід експертів.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="courses__more-text">Показати ще</a>
+                </div>
+            </div>
+        </section>
+        <section class="stairs">
+            <div class="container">
+                <div class="stars-content">
+                    <div class="grid">
+                        <div class="grid-item text top-left">
+                            <h1>ДЛЯ КОГО?</h1>
+                            <p>
+                                Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу. Ми об'єднали сучасні знання та досвід експертів, щоб допомогти вам закрити ключові прогалини та підготуватися до актуальних викликів ринку.
+                            </p>
+                        </div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item"></div>
+                        <div class="grid-item text bottom-right">
+                            <h1>ЯК?</h1>
+                            <p>Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу.</p>
+                            <ul>
+                                <li>Крок 1</li>
+                                <li>Крок 2</li>
+                                <li>Крок 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="steps">
+                        <div class="step step-1"></div>
+                        <div class="step step-2"></div>
+                        <div class="step step-3"></div>
+                        <div class="step step-4"></div>
+                        <div class="step step-5"></div>
+                        <div class="step step-6"></div>
+                        <div class="step step-7"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="questions">
+            <div class="container">
+                <h2 class="questions__title">ПИТАННЯ ТА ВІДПОВІДІ</h2>
+                <div class="questions-box">
+                    <div class="questions-box-item">
+                        <div class="questions-box-item__question question">В якому форматі навчання</div>
+                        <button class="questions-box-item__button button">
+                            <img src="./public/images/questions-arrow.svg" alt="question-arrow">
+                        </button>
+                        <div class="questions-box-item__answer answer">Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу. Ми об'єднали сучасні знання та досвід експертів, щоб допомогти вам закрити ключові прогалини та підготуватися до актуальних викликів ринку. </div>
+                    </div>
+                    <div class="questions-box-item">
+                        <div class="questions-box-item__question question">Чи залишиться у мене доступ до навчання?</div>
+                        <button class="questions-box-item__button button">
+                            <img src="./public/images/questions-arrow.svg" alt="question-arrow">
+                        </button>
+                        <div class="questions-box-item__answer answer">Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу. Ми об'єднали сучасні знання та досвід експертів, щоб допомогти вам закрити ключові прогалини та підготуватися до актуальних викликів ринку. </div>
+                    </div>
+                    <div class="questions-box-item">
+                        <div class="questions-box-item__question question">Якою мовою навчання</div>
+                        <button class="questions-box-item__button button">
+                            <img src="./public/images/questions-arrow.svg" alt="question-arrow">
+                        </button>
+                        <div class="questions-box-item__answer answer">Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу. Ми об'єднали сучасні знання та досвід експертів, щоб допомогти вам закрити ключові прогалини та підготуватися до актуальних викликів ринку. </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <section class="blog">
+            <div class="container">
+                <div class="blog-info">
+                    <h2 class="blog-info__title">БЛОГ</h2>
+                    <p class="blog-info__text">Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу. </p>
+                </div>
+                <div class="blog-box">
+                    <div class="blog-box-item">
+                        <img class="blog-box-item__img" src="./public/images/blog-card-1.svg" alt="blog-card-1">
+                        <div class="blog-box-info">
+                            <h3 class="blog-box-info__title">Чи(м) Figma краща за Canva?</h3>
+                            <p class="blog-box-info__text">Для дизайну і креативу існує безліч
+                                інструментів, щоб втілювати свої ідеї у
+                                реальність. Два найпопулярніших – Figma і</p>
+                        </div>
+                    </div>
+                    <div class="blog-box-item">
+                        <img class="blog-box-item__img" src="./public/images/blog-card-2.svg" alt="blog-card-2">
+                        <div class="blog-box-info">
+                            <h3 class="blog-box-info__title">Чи(м) Figma краща за Canva?</h3>
+                            <p class="blog-box-info__text">Для дизайну і креативу існує безліч
+                                інструментів, щоб втілювати свої ідеї у
+                                реальність. Два найпопулярніших – Figma і i</p>
+                        </div>
+                    </div>
+                    <div class="blog-box-item">
+                        <img class="blog-box-item__img" src="./public/images/blog-card-3.svg" alt="blog-card-3">
+                        <div class="blog-box-info">
+                            <h3 class="blog-box-info__title">Чи(м) Figma краща за Canva?</h3>
+                            <p class="blog-box-info__text">Для дизайну і креативу існує безліч
+                                інструментів, щоб втілювати свої ідеї у
+                                реальність. Два найпопулярніших – Figma і</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="more-text">Показати ще</a>
+            </div>
+        </section>
+        <section class="contact-us">
+            <div class="container">
+                <div class="contacts-left-side">
+                    <h2 class="contacts-left-side__title">ЗАЦІКАВИЛИ?</h2>
+                    <p class="contacts-left-side__text">
+                        Заповнюй форму і ми сконтактуємо з тобою найближчим часом.
+                    </p>
+                </div>
+                <div class="contacts-right-side">
+                    <form class="contacts-form">
+                        <label for="name">
+                            <input
+                                    class="contacts-form__item"
+                                    name="name"
+                                    id="name"
+                                    type="text"
+                                    placeholder="Ваше ім'я"
+                            />
+                        </label>
+                        <label for="phone">
+                            <input
+                                    class="contacts-form__item"
+                                    name="name"
+                                    id="phone"
+                                    type="text"
+                                    placeholder="+38 (000) 000 00 00"
+                            />
+                        </label>
+                        <label for="question">
+                  <textarea
+                          class="contacts-form__item"
+                          rows="1"
+                          cols="1"
+                          id="question"
+                          name="question"
+                          placeholder="Ваше питання"
+                  ></textarea>
+                        </label>
+                        <input
+                                class="contacts-form__button"
+                                value="ЗВ'ЯЗАТИСЬ З НАМИ"
+                                type="submit"
+                        />
+                    </form>
+                </div>
+            </div>
+        </section>
         <section class="newsletter">
             <div class="container">
                 <div class="newsletter-box">
