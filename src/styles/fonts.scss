@@ -20,6 +20,15 @@
   font-family: "Proba Pro";
   src:
           url("../fonts/ProbaPro/stylesheet.css") format("css"),
+          url("../fonts/Probapro/ProbaPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proba Pro";
+  src:
+          url("../fonts/ProbaPro/stylesheet.css") format("css"),
           url("../fonts/Probapro/ProbaPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;

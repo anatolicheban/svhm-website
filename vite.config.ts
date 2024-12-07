@@ -15,7 +15,7 @@ export default defineConfig({
       input: {
         index: resolve(__dirname, "index.html"),
         ["all-courses"]: resolve(__dirname, "all-courses.html"),
-        about: resolve(__dirname, "about.html"),
+        about: resolve(__dirname, "about-page.html"),
       },
     },
   },

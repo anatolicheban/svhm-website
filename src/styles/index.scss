@@ -237,7 +237,7 @@ main.main {
 
   }
 
-  .our-courses {
+  .courses-home {
     .courses {
       .courses-list {
         display: flex;
@@ -392,127 +392,6 @@ main.main {
       left: 80%;
       top: calc(100% - (13.14% + 8.174% + 13.14% + 13.14% + 13.14% + 13.14% + 8.174% + 8.174% + 8.174% + 8.174% + 8.174% + 8.174%));
       height: calc(13.14% + 8.174% + 13.14% + 13.14% + 8.174% + 8.174% + 8.174% + 8.174% + 8.174% + 8.174%)
-    }
-  }
-
-  .questions {
-    padding: 90px 0;
-    background: $primary-color;
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
-    }
-
-    .questions__title {
-      font-size: 2.75rem;
-      line-height: 48.4px;
-      font-weight: 700;
-      color: $secondary-color;
-    }
-
-    .questions-box {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-
-      .questions-box-item {
-        position: relative;
-        padding: 15px 150px 15px 50px;
-        border: 1px solid $secondary-color;
-        border-radius: 40px;
-        display: flex;
-        gap: 15px;
-        flex-direction: column;
-        transition: 0.5s all;
-        cursor: pointer;
-
-        &:hover {
-          background: $secondary-color;
-        }
-
-        &:hover button {
-          background: $primary-color;
-        }
-
-        &:hover button img {
-          filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
-        }
-
-        &:hover .question{
-          color: $primary-color;
-        }
-
-        &.active {
-          border-radius: 40px;
-        }
-
-        &.active:hover {
-          background: transparent;
-        }
-
-        &.active:hover .question {
-          color: $secondary-color;
-        }
-
-        &.active:hover button {
-          background: $secondary-color;
-        }
-
-
-        &.active:hover button img {
-          filter: brightness(0) saturate(100%) invert(5%) sepia(5%) saturate(466%) hue-rotate(131deg) brightness(97%) contrast(88%);
-        }
-
-        &.active .answer{
-          display: block;
-          max-height: 500px;
-          opacity: 1;
-        }
-
-        &.active button{
-          bottom: 15px;
-          top: auto;
-          right: 30px;
-        }
-
-        &.active button img {
-          transform: rotate(180deg);
-        }
-
-        &__question {
-          display: flex;
-          align-items: center;
-          font-size: 2rem;
-          line-height: 35.2px;
-          font-weight: 600;
-          color: $secondary-color;
-          text-transform: uppercase;
-        }
-
-        &__answer {
-          font-size: 1.5rem;
-          line-height: 33.6px;
-          color: $secondary-color;
-          display: none;
-          max-height: 0;
-          opacity: 0;
-          overflow: hidden;
-          transition: 0.5s all;
-
-        }
-
-        &__button {
-          position: absolute;
-          right: 30px;
-          top: 15.5px;
-          padding: 9.66px 12.27px 9.27px 12.46px;
-          background: $secondary-color;
-          border-radius: 300px;
-          border: 1px solid $primary-color;
-        }
-      }
     }
   }
 

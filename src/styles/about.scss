@@ -1,0 +1,125 @@
+main.main {
+
+  .hero-section-about {
+    padding: 90px 0;
+    background: $primary-color;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 170px;
+    }
+
+    .hero-section-info {
+      color: $secondary-color;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 551px;
+      width: 100%;
+
+      &__title {
+        font-size: 3.375rem;
+        line-height: 59.4px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      &__text {
+        font-size: 1.5rem;
+        line-height: 33.6px;
+        padding-right: 46px;
+      }
+
+    }
+  }
+
+  .questions-about {
+    padding: 90px 0;
+    background: $secondary-color;
+
+    .questions-title {
+      color: $primary-color;
+    }
+
+    .container {
+
+      .questions-box {
+        .questions-box-item {
+          border: 1px solid $primary-color;
+
+          .item-question-container {
+            display: flex;
+            gap: 20px;
+
+            &__number {
+              font-size: 2rem;
+              line-height: 35.2px;
+              font-weight: 300;
+              color: $primary-color;
+            }
+
+            &__question {
+              display: flex;
+              align-items: center;
+              font-size: 2rem;
+              line-height: 35.2px;
+              font-weight: 600;
+              color: $primary-color;
+            }
+
+          }
+
+          &:hover {
+            background: $blue-color;
+            border-color: $blue-color;
+          }
+
+          &:hover button {
+            background: $secondary-color;
+          }
+
+          &:hover button img {
+            filter: brightness(0) saturate(100%) invert(5%) sepia(5%) saturate(466%) hue-rotate(131deg) brightness(97%) contrast(88%);
+          }
+
+          &:hover .item-question-container .item-question, &:hover .item-question-container .item-number {
+            color: $secondary-color;
+          }
+
+
+          &.active:hover {
+            background: transparent;
+            border-color: $primary-color;
+          }
+
+          &.active:hover .item-question-container .item-question, &.active:hover .item-question-container .item-number {
+            color: $primary-color;
+          }
+
+          &.active:hover button {
+            background: $primary-color;
+          }
+
+
+          &.active:hover button img {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
+          }
+
+          &__answer {
+            color: $primary-color;
+          }
+
+          &__button {
+            background: $primary-color;
+            border: 1px solid transparent;
+
+            img {
+              filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

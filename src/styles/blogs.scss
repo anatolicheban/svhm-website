@@ -1,6 +1,6 @@
 main.main {
 
-  .blog {
+  .blogs-blog {
     padding: 110px 0 90px 0;
 
     .container {
@@ -50,6 +50,7 @@ main.main {
       margin-top: 50px;
       display: grid;
       grid-template-columns: 2fr 2fr;
+      gap: 30px;
 
       .blog-box-item {
         display: flex;
@@ -164,4 +165,42 @@ main.main {
       }
     }
   }
+}
+
+@media (max-width: 1024px) {
+
+  main.main {
+    .blogs-blog {
+      .blog-box {
+        grid-template-columns: 1fr;
+        place-items: center;
+        padding: 0 32px;
+
+        .blog-box-item {
+          max-width: 100%;
+
+          .blog-box-info {
+
+            &__date {
+              font-size: 2rem;
+              line-height: 35.2px;
+            }
+
+            &__title {
+              font-size: 2.75rem;
+              line-height: 48.4px;
+            }
+
+            &__text {
+              font-size: 2rem;
+              line-height: 35.2px;
+              max-width: 100%;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
 }
