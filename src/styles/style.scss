@@ -334,171 +334,6 @@ main.main {
     }
   }
 
-  .contact-us {
-    padding: 90px 0;
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .contacts-left-side {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      color: $primary-color;
-      max-width: 375px;
-
-      &__title {
-        font-size: 3.375rem;
-        line-height: 59.4px;
-        font-weight: bold;
-      }
-
-      &__text {
-        font-size: 1.5rem;
-        line-height: 33.6px;
-      }
-    }
-
-    .contacts-right-side {
-      border: 1px solid $primary-color;
-      padding: 40px 30px;
-      border-radius: 25px;
-      max-width: 736px;
-      width: 100%;
-
-      .contacts-form {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        label {
-          outline: none;
-          border: none;
-        }
-
-        &__item {
-          width: 100%;
-          padding: 17px 20px;
-          border: none;
-          border-bottom: 1px solid $primary-color;
-          background: transparent;
-          color: rgba(25, 26, 26, 0.5);
-          font-size: 1.5rem;
-          line-height: 33.6px;
-          outline: none;
-        }
-
-        textarea {
-          resize: none;
-        }
-
-        &__button {
-          outline: none;
-          color: $primary-color;
-          background: transparent;
-          border: 1px solid $primary-color;
-          cursor: pointer;
-          padding: 15px 0;
-          font-size: 1.125rem;
-          line-height: 19.8px;
-          border-radius: 300px;
-          margin-top: 20px;
-          transition: 0.6s all;
-
-          &:hover {
-            background: $blue-color;
-            color: $secondary-color;
-            border-color: $secondary-color;
-          }
-
-          &.disabled {
-            opacity: 40%;
-          }
-        }
-      }
-    }
-  }
-
-  .newsletter {
-    padding: 90px 0;
-    background: $blue-color;
-
-    .container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .newsletter-box {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      justify-content: space-between;
-
-
-      &__title {
-        font-size: 3.375rem;
-        line-height: 59.4px;
-        font-weight: bold;
-        color: $secondary-color;
-        max-width: 426px;
-        width: 100%;
-      }
-
-      .newsletter-form {
-        display: flex;
-        align-items: center;
-        border-radius: 66px;
-        background: $secondary-color;
-        padding: 10px 10px 10px 50px;
-        justify-content: space-between;
-        max-width: 737px;
-        width: 100%;
-
-        label {
-          border: none;
-          outline: none;
-        }
-
-        &__email {
-          font-size: 1.5rem;
-          color: rgba(25, 26, 26, 0.5);
-          line-height: 33.6px;
-          outline: none;
-          border: none;
-          background: transparent;
-        }
-
-        &__button {
-          font-size: 1.125rem;
-          color: $primary-color;
-          line-height: 19.8px;
-          padding: 15px 35px;
-          outline: none;
-          border: 1px solid $primary-color;
-          cursor: pointer;
-          background: transparent;
-          border-radius: 300px;
-          transition: 0.6s all;
-
-          &:hover {
-            background: $blue-color;
-            border-color: $secondary-color;
-            color: $secondary-color;
-          }
-
-          &.disabled {
-            opacity: 40%;
-          }
-        }
-      }
-    }
-  }
-
   .about-us-section {
     padding: 90px 0;
     background: $primary-color;
@@ -793,7 +628,7 @@ main.main {
           }
 
           &__text {
-            font-size: 1.175rem;
+            font-size: 1.125rem;
             line-height: 25.2px;
           }
 
@@ -802,6 +637,254 @@ main.main {
 
     }
 
+  }
+
+  .faq {
+    padding: 90px 0;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .faq__title {
+      font-size: 2.75rem;
+      line-height: 48.4px;
+      font-weight: 700;
+      color: $primary-color;
+    }
+
+    .faq-box {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      gap: 30px;
+
+      .faq-box-item {
+        padding: 40px 50px 40px 50px;
+        border: 1px solid $primary-color;
+        border-radius: 25px;
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        transition: 0.5s all;
+        cursor: pointer;
+
+        &:hover {
+          border-color: $blue-color;
+          background: $blue-color;
+        }
+
+        &:hover .question{
+          color: $secondary-color;
+        }
+
+        &.active {
+          background: $blue-color;
+          border-color: $blue-color;
+          border-radius: 25px;
+        }
+
+        &.active .question {
+          color: $secondary-color;
+        }
+
+        &.active .answer{
+          display: block;
+          max-height: 500px;
+          opacity: 1;
+        }
+
+        &__question {
+          display: flex;
+          align-items: center;
+          font-size: 2rem;
+          line-height: 35.2px;
+          font-weight: 600;
+          color: $primary-color;
+        }
+
+        &__answer {
+          padding-top: 15px;
+          font-size: 1.5rem;
+          line-height: 33.6px;
+          color: $secondary-color;
+          display: none;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transition: 0.5s all;
+          border-top: 1px solid $secondary-color;
+
+        }
+      }
+    }
+
+  }
+
+  .contact-us {
+    padding: 90px 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .contacts-left-side {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: $primary-color;
+      max-width: 375px;
+
+      &__title {
+        font-size: 3.375rem;
+        line-height: 59.4px;
+        font-weight: bold;
+      }
+
+      &__text {
+        font-size: 1.5rem;
+        line-height: 33.6px;
+      }
+    }
+
+    .contacts-right-side {
+      border: 1px solid $primary-color;
+      padding: 40px 30px;
+      border-radius: 25px;
+      max-width: 736px;
+      width: 100%;
+
+      .contacts-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+          outline: none;
+          border: none;
+        }
+
+        &__item {
+          width: 100%;
+          padding: 17px 20px;
+          border: none;
+          border-bottom: 1px solid $primary-color;
+          background: transparent;
+          color: rgba(25, 26, 26, 0.5);
+          font-size: 1.5rem;
+          line-height: 33.6px;
+          outline: none;
+        }
+
+        textarea {
+          resize: none;
+        }
+
+        &__button {
+          outline: none;
+          color: $primary-color;
+          background: transparent;
+          border: 1px solid $primary-color;
+          cursor: pointer;
+          padding: 15px 0;
+          font-size: 1.125rem;
+          line-height: 19.8px;
+          border-radius: 300px;
+          margin-top: 20px;
+          transition: 0.6s all;
+
+          &:hover {
+            background: $blue-color;
+            color: $secondary-color;
+            border-color: $secondary-color;
+          }
+
+          &.disabled {
+            opacity: 40%;
+          }
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    padding: 90px 0;
+    background: $blue-color;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .newsletter-box {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: space-between;
+
+
+      &__title {
+        font-size: 3.375rem;
+        line-height: 59.4px;
+        font-weight: bold;
+        color: $secondary-color;
+        max-width: 426px;
+        width: 100%;
+      }
+
+      .newsletter-form {
+        display: flex;
+        align-items: center;
+        border-radius: 66px;
+        background: $secondary-color;
+        padding: 10px 10px 10px 50px;
+        justify-content: space-between;
+        max-width: 737px;
+        width: 100%;
+
+        label {
+          border: none;
+          outline: none;
+        }
+
+        &__email {
+          font-size: 1.5rem;
+          color: rgba(25, 26, 26, 0.5);
+          line-height: 33.6px;
+          outline: none;
+          border: none;
+          background: transparent;
+        }
+
+        &__button {
+          font-size: 1.125rem;
+          color: $primary-color;
+          line-height: 19.8px;
+          padding: 15px 35px;
+          outline: none;
+          border: 1px solid $primary-color;
+          cursor: pointer;
+          background: transparent;
+          border-radius: 300px;
+          transition: 0.6s all;
+
+          &:hover {
+            background: $blue-color;
+            border-color: $secondary-color;
+            color: $secondary-color;
+          }
+
+          &.disabled {
+            opacity: 40%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1001,4 +1084,5 @@ footer.footer {
 @import "./about.scss";
 @import "./all-courses.scss";
 @import "./blogs.scss";
+@import "./event.scss";
 @import "./index.scss";
