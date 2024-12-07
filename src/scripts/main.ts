@@ -23,3 +23,7 @@ document.querySelectorAll('.faq-box-item').forEach(item => {
         item.classList.toggle('active');
     });
 });
+
+window.addEventListener('load', () => {
+    document.body.classList.remove('transition-disabled');
+});
