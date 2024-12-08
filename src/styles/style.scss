@@ -156,7 +156,6 @@ main.main {
           font-size: 1.5rem;
           line-height: 26.4px;
           text-align: center;
-          color: $primary-color;
           border: 1px solid $primary-color;
           border-radius: 200px;
           padding: 15.5px 34px;
@@ -234,7 +233,6 @@ main.main {
 
             &__button {
               background: transparent;
-              color: $secondary-color;
               padding: 15px 35px;
               font-size: 1.125rem;
               line-height: 19.8px;
@@ -244,8 +242,16 @@ main.main {
               border-radius: 300px;
               border: 1px solid $secondary-color;
 
-              &:hover {
+              a {
+                color: $secondary-color;
+                transition: 0.25s all;
+              }
+
+              &:hover{
                 background: $secondary-color;
+              }
+
+              &:hover a{
                 color: $primary-color;
               }
 
@@ -734,6 +740,69 @@ main.main {
 
   }
 
+  .reservation {
+    padding: 90px 0;
+
+    .container {
+      text-align: center;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 3.375rem;
+      line-height: 48.4px;
+      color: $primary-color;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &__text {
+      margin-top: 50px;
+      font-size: 2rem;
+      line-height: 35.2px;
+      font-weight: 400;
+      color: $primary-color;
+
+      span {
+        margin: 0 36px 0 36px;
+        color: $blue-color;
+        font-size: 3.5rem;
+        line-height: 61.6px;
+        font-weight: 700;
+      }
+    }
+
+    &__button {
+      margin-top: 50px;
+      background: transparent;
+      padding: 15px 35px;
+      font-size: 1.125rem;
+      line-height: 19.8px;
+      text-align: center;
+      transition: 0.25s all;
+      border-radius: 300px;
+      border: 1px solid $primary-color;
+
+      a {
+        color: $primary-color;
+      }
+
+      &:hover {
+        background: $blue-color;
+        border-color: $blue-color;
+      }
+
+      &:hover a {
+        color: $secondary-color;
+      }
+
+      &.disabled {
+        opacity: 40%;
+      }
+    }
+
+  }
+
   .contact-us {
     padding: 90px 0;
 
@@ -1097,4 +1166,5 @@ footer.footer {
 @import "./all-courses.scss";
 @import "./blogs.scss";
 @import "./event.scss";
+@import "./course.scss";
 @import "./index.scss";

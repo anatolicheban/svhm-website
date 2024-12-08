@@ -123,7 +123,6 @@ main.main {
 
             &__button {
               background: transparent;
-              color: $primary-color;
               padding: 15px 35px;
               font-size: 1.125rem;
               line-height: 19.8px;
@@ -132,6 +131,15 @@ main.main {
               margin-top: 49px;
               border-radius: 300px;
               border: 1px solid $primary-color;
+
+              a {
+                transition: 0.25s all;
+                color: $primary-color;
+              }
+
+              &:hover a {
+                color: $secondary-color;
+              }
 
               &:hover {
                 background: $blue-color;
@@ -257,6 +265,23 @@ main.main {
           border-radius: 50px;
           border: 1px solid $primary-color;
           gap: 80px;
+
+          .courses-list-card-left-side {
+
+            &__button {
+
+              a {
+                transition: 0.25s all;
+                color: $secondary-color;
+              }
+
+              &:hover a {
+                color: $primary-color;
+              }
+
+            }
+
+          }
 
           &:nth-child(1n) .courses-list-card-left-side {
             background: $blue-color;

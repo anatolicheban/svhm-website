@@ -1,0 +1,302 @@
+main.main {
+
+  .hero-section-course {
+
+    padding: 90px 0;
+    background: $primary-color;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 186px;
+
+      .hero-section-info {
+        color: $secondary-color;
+
+        &__lessons {
+          display: flex;
+          font-size: 2rem;
+          line-height: 110%;
+        }
+
+        &__title {
+          margin-top: 25px;
+          font-size: 3.375rem;
+          line-height: 110%;
+          font-weight: 700;
+        }
+
+        &__text {
+          margin-top: 25px;
+          font-size: 1.5rem;
+          line-height: 140%;
+        }
+
+        &__button {
+          margin-top: 40px;
+          background: transparent;
+          color: $secondary-color;
+          padding: 15px 35px;
+          font-size: 1.125rem;
+          line-height: 110%;
+          text-align: center;
+          transition: 0.25s all;
+          border-radius: 300px;
+          border: 1px solid $secondary-color;
+
+          &:hover {
+            background: $secondary-color;
+            color: $primary-color;
+            border-color: $secondary-color;
+          }
+
+          &.disabled {
+            opacity: 40%;
+          }
+        }
+      }
+
+      img {
+        max-width: 600px;
+        max-height: 412px;
+        height: 100%;
+        width: 100%;
+        border-radius: 50px;
+      }
+
+    }
+
+
+  }
+
+  .expertise {
+    padding: 90px 0;
+    background: $primary-color;
+
+    &__img {
+      max-width: 600px;
+      max-height: 412px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 58px;
+    }
+
+    .expertise-info {
+
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: $secondary-color;
+
+      &__title {
+        text-transform: uppercase;
+        font-size: 2.75rem;
+        line-height: 110%;
+        font-weight: 700;
+      }
+
+      .expertise-info-list {
+        max-width: 544px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+        gap: 3.25px;
+        justify-content: space-between;
+
+        &__item {
+          font-size: 1.5rem;
+          line-height: 140%;
+
+          &::marker {
+            font-size: 1rem;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .questions-course {
+    padding: 90px 0;
+    background: $secondary-color;
+
+    .questions-title {
+      color: $primary-color;
+    }
+
+    .container {
+
+      .questions-box {
+        .questions-box-item {
+          border: 1px solid $primary-color;
+
+          .item-question-container {
+            display: flex;
+            gap: 20px;
+
+            &__number {
+              font-size: 2rem;
+              line-height: 35.2px;
+              color: $primary-color;
+            }
+
+            &__question {
+              display: flex;
+              align-items: center;
+              font-size: 2rem;
+              line-height: 35.2px;
+              font-weight: 600;
+              color: $primary-color;
+            }
+
+          }
+
+          &:hover {
+            background: $blue-color;
+            border-color: $blue-color;
+          }
+
+          &:hover button {
+            background: $secondary-color;
+          }
+
+          &:hover button img {
+            filter: brightness(0) saturate(100%) invert(5%) sepia(5%) saturate(466%) hue-rotate(131deg) brightness(97%) contrast(88%);
+          }
+
+          &:hover .item-question-container .item-question, &:hover .item-question-container .item-number {
+            color: $secondary-color;
+          }
+
+
+          &.active:hover {
+            background: transparent;
+            border-color: $primary-color;
+          }
+
+          &.active:hover .item-question-container .item-question, &.active:hover .item-question-container .item-number {
+            color: $primary-color;
+          }
+
+          &.active:hover button {
+            background: $primary-color;
+          }
+
+
+          &.active:hover button img {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
+          }
+
+          &__answer {
+            color: $primary-color;
+
+            ul {
+              counter-reset: question-counter;
+              margin: 0;
+              list-style: none;
+              padding: 0;
+
+              li {
+                font-size: 1.5rem;
+                line-height: 33.6px;
+                counter-increment: question-counter;
+                margin: 5px 0;
+
+                &:before {
+                  content: "УРОК " counter(question-counter) ". ";
+                }
+              }
+            }
+
+          }
+
+          &__button {
+            background: $primary-color;
+            border: 1px solid transparent;
+
+            img {
+              filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .reservation-course {
+    background: $secondary-color;
+
+    .container {
+
+      .reservation-course-title {
+        color: $primary-color;
+      }
+
+      .reservation-course-text {
+        color: $primary-color;
+
+        span {
+          margin: 0 36px 0 36px;
+          color: $blue-color;
+        }
+      }
+
+      .reservation-course-button {
+        margin-top: 50px;
+        background: transparent;
+        padding: 15px 35px;
+        font-size: 1.125rem;
+        line-height: 19.8px;
+        text-align: center;
+        transition: 0.25s all;
+        border-radius: 300px;
+        border: 1px solid $primary-color;
+
+        a {
+          color: $primary-color;
+        }
+
+        &:hover {
+          background: $blue-color;
+          border-color: $blue-color;
+        }
+
+        &:hover a {
+          color: $secondary-color;
+        }
+
+        &.disabled {
+          opacity: 40%;
+        }
+      }
+    }
+  }
+
+  .faq-course {
+    background: $primary-color;
+
+    .faq__title {
+      color: $secondary-color;
+    }
+
+    .faq-box {
+      .faq-box-item {
+        border: 1px solid $secondary-color;
+        background: $secondary-color;
+
+        &.active {
+          border-color: $secondary-color;
+        }
+      }
+    }
+  }
+}
