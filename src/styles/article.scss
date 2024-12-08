@@ -63,6 +63,148 @@ main.main {
     }
   }
 
+  .overview {
+    padding: 90px 0;
+
+    .container {
+      display: flex;
+      gap: 112px;
+      justify-content: space-between;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+
+      .content-box {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+
+        &__title {
+          font-size: 2rem;
+          line-height: 110%;
+          font-weight: 700;
+        }
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+          font-size: 1.125rem;
+          line-height: 140%;
+        }
+
+        &__img {
+          max-width: 830px;
+          width: 100%;
+        }
+
+        .quote-box {
+          display: flex;
+          flex-direction: column;
+          border: 1px solid $primary-color;
+          gap: 30px;
+          border-radius: 50px;
+          padding: 40px 86px 40px 50px;
+          color: $primary-color;
+
+          .quote-box-quote {
+            display: flex;
+            gap: 25px;
+
+            &__image {
+              align-self: start;
+            }
+
+            &__quote {
+              font-weight: 500;
+              font-size: 1.5rem;
+              text-transform: uppercase;
+              line-height: 140%;
+            }
+
+          }
+
+          &__author {
+            align-self: end;
+            font-size: 1.125rem;
+            line-height: 110%;
+          }
+
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+
+      &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 140%;
+      }
+
+      .navigation-box-list {
+        margin: 0;
+        margin-top: 10px;
+        display: flex;
+        border: 1px solid $primary-color;
+        border-radius: 25px;
+        padding: 28px 0 42px 25px;
+        list-style: none;
+        flex-direction: column;
+        color: $primary-color;
+        gap: 10px;
+
+        &__item {
+          text-transform: lowercase;
+          font-size: 1rem;
+          line-height: 110%;
+
+          &:hover {
+            a {
+              color: $blue-color;
+              font-weight: 600;
+            }
+          }
+
+          a {
+            color: $primary-color;
+          }
+        }
+
+      }
+
+      .navigation-social-links {
+        margin-top: 31px;
+        display: flex;
+        gap: 20px;
+        padding: 16px 23px 16px 25px;
+        border: 1px solid $primary-color;
+        border-radius: 15px;
+        align-items: center;
+
+        span {
+          line-height: 110%;
+          color: $primary-color;
+        }
+
+        .social-links {
+          display: flex;
+          gap: 14px;
+          
+          &__item {
+            
+          }
+
+        }
+      }
+    }
+  }
 
   .registration {
     padding: 90px 0;

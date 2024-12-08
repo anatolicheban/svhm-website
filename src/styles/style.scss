@@ -700,26 +700,33 @@ main.main {
         max-width: 397px;
         overflow: hidden;
 
-        &__img {
+        .blog-box-item-image {
+          position: relative;
           border-radius: 29px 29px 0 0;
-          height: 100%;
-          width: 100%;
-        }
 
-        &__field {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          bottom: 48%;
-          left: 6%;
-          position: absolute;
-          padding: 5px 20px;
-          font-size: 1rem;
-          font-weight: 700;
-          line-height: calc(2 * 0.5px + 110%);
-          color: $primary-color;
-          background-color: $secondary-color;
-          border-radius: 24px;
+          &__img {
+            border-radius: 29px 29px 0 0;
+            height: calc(100% + 2px);
+            margin-top: -1px;
+            width: calc(100% + 2px);
+            margin-left: -1px;
+          }
+
+          &__field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 14px;
+            left: 23px;
+            position: absolute;
+            padding: 5px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: calc(2 * 0.5px + 110%);
+            color: $primary-color;
+            background-color: $secondary-color;
+            border-radius: 24px;
+          }
         }
 
         .blog-box-info {
