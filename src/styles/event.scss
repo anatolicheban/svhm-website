@@ -48,6 +48,13 @@ main.main {
   .hero-section-event {
     padding: 90px 0;
 
+    img {
+      max-width: 600px;
+      max-height: 412px;
+      height: 100%;
+      width: 100%;
+    }
+
     .container {
       display: flex;
       justify-content: space-between;

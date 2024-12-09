@@ -407,56 +407,49 @@ main.main {
           position: absolute;
           background-color: $primary-color;
           height: 0;
-          width: 100%;
+          width: 100vw;
         }
 
         .step-1 {
           left: -207.5px;
           top: calc(100% - 42px);
           height: 6.26%;
-          width: calc(100% + 207.5px);
         }
 
         .step-2 {
           left: 8.47%;
           top: calc(100% - 18.78%);
           height: calc(14.74% + 6.26%);
-          width: 100%;
         }
 
         .step-3 {
           left: calc(8.47% * 3);
           top: calc(100% - 35.74%);
           height: 35.74%;
-          width: 100%;
         }
 
         .step-4 {
           left: calc(8.47% * 5);
           top: calc(100% - 50.48%);
           height: 50.48%;
-          width: 100%;
         }
 
         .step-5 {
           left: calc(8.47% * 7);
           top: calc(100% - 65.22%);
           height: 65.22%;
-          width: 100%;
         }
 
         .step-6 {
           left: calc(8.47% * 9);
           top: calc(100% - 79.96%);
           height: 79.96%;
-          width: 100%;
         }
 
         .step-7 {
           left: calc(8.47% * 11);
           top: calc(100% - 94.7%);
           height: 94.7%;
-          width: 100%;
         }
       }
     }
