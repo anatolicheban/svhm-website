@@ -27,3 +27,18 @@ document.querySelectorAll(".faq-box-item").forEach((item) => {
 window.addEventListener("load", () => {
   document.body.classList.remove("transition-disabled");
 });
+
+// HAMBURGER
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.getElementById('menu');
+  const hamburger = document.querySelector('.hamburger');
+  const backButton = document.querySelector('.back-button');
+
+  function toggleMenu() {
+    menu.classList.toggle('open');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  backButton.addEventListener('click', toggleMenu);
+});
