@@ -157,7 +157,7 @@ header.header {
   padding: 20px;
   z-index: 1000;
   transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 
   &.open {
     transform: translateX(0);
@@ -170,6 +170,14 @@ header.header {
     border: 1px solid $secondary-color;
     background: transparent;
     cursor: pointer;
+    transition: 0.25s all;
+
+    &:hover {
+      background-color: $secondary-color;
+      img {
+        filter: brightness(0) saturate(100%) invert(5%) sepia(5%) saturate(466%) hue-rotate(131deg) brightness(97%) contrast(88%);
+      }
+    }
   }
 
   .nav-menu {
@@ -183,6 +191,12 @@ header.header {
 
       &__item {
         line-height: 110%;
+        transition: 0.25s all;
+
+        &:hover {
+          font-weight: 600;
+        }
+
         a {
           font-size: 1.125rem;
         }
@@ -1501,6 +1515,27 @@ footer.footer {
   }
 }
 
+@media (min-width: 781px) {
+  header.header {
+    .container {
+      .nav-menu {
+        display: flex;
+        gap: 10px;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+
+  .menu {
+    &.open {
+      transform: translateX(-100%);
+    }
+  }
+}
+
 @media (max-width: 780px) {
   header.header {
     .container {
@@ -1713,6 +1748,12 @@ footer.footer {
             border-radius: 20px;
             padding: 17px 0 20px 17px;
 
+            &__question {
+              width: 80%;
+              font-size: 1.125rem;
+              line-height: 110%;
+            }
+
             .item-question-container {
               width: 80%;
               gap: 10px;
@@ -1765,6 +1806,11 @@ footer.footer {
         gap: 30px;
 
         .courses {
+          
+          .buttons-box {
+            gap: 15px;
+          }
+          
           .courses-list {
             .courses-list-card {
               gap: 20px;
@@ -1864,18 +1910,49 @@ footer.footer {
     }
 
     .newsletter {
+      padding: 40px 0;
+
       .container {
+        align-items: center;
+        justify-content: center;
+
         .newsletter-box {
+          gap: 0;
+
+          &__button-form {
+            display: flex;
+          }
+
+          &__title {
+            font-size: 2.25rem;
+            line-height: 110%;
+          }
+
           .newsletter-form {
             padding: 10px 10px 10px 20px;
+            margin-top: 30px;
 
             &__button {
               display: none;
             }
-          }
 
-          &__button-form {
-            display: flex;
+            label {
+              border: none;
+              outline: none;
+            }
+
+            &__email {
+              font-size: 0.875rem;
+              color: rgba(25, 26, 26, 0.5);
+              line-height: 140%;
+              outline: none;
+              border: none;
+              background: transparent;
+            }
+
+            &__button {
+              display: none;
+            }
           }
         }
       }
@@ -2107,45 +2184,7 @@ footer.footer {
       }
     }
 
-    .newsletter {
-      padding: 40px 0;
 
-      .container {
-        align-items: center;
-        justify-content: center;
-
-        .newsletter-box {
-          gap: 0;
-
-          &__title {
-            font-size: 2.25rem;
-            line-height: 110%;
-          }
-
-          .newsletter-form {
-            margin-top: 30px;
-
-            label {
-              border: none;
-              outline: none;
-            }
-
-            &__email {
-              font-size: 0.875rem;
-              color: rgba(25, 26, 26, 0.5);
-              line-height: 140%;
-              outline: none;
-              border: none;
-              background: transparent;
-            }
-
-            &__button {
-              display: none;
-            }
-          }
-        }
-      }
-    }
   }
 
   footer.footer {

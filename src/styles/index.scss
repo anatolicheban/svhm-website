@@ -4,15 +4,21 @@ main.main {
     padding: 90px 0;
     background: $primary-color;
 
+    &__hidden-content {
+      opacity: 0;
+      width: 100%;
+    }
+
     .container {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 69.31px;
+      position: relative;
     }
 
 
     .left-side {
+      max-width: 725px;
+      width: 100%;
 
       &__title {
         font-size: 3.2rem;
@@ -62,6 +68,9 @@ main.main {
     }
 
     .right-side {
+      position: absolute;
+      right: 0;
+      top: 15%;
       img {
         max-width: 445.69px;
       }
@@ -468,6 +477,7 @@ main.main {
 
 }
 
+
 @media (max-width: 1280px) {
   main.main {
 
@@ -488,6 +498,22 @@ main.main {
           max-width: 100%;
           order: -1;
           text-align: center;
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1200px) {
+  main.main {
+    .hero-section {
+      .container {
+        .right-side {
+          img {
+            max-width: 418px;
+            width: 100%;
+          }
         }
       }
     }
@@ -567,6 +593,23 @@ main.main {
   }
 }
 
+@media (max-width: 840px) {
+  main.main {
+    .hero-section {
+      .container {
+        .right-side {
+          img {
+            max-width: 350px;
+            max-height: 340px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+  }
+}
 
 @media (max-width: 768px) {
 
@@ -575,6 +618,22 @@ main.main {
   }
 
   main.main {
+
+    .hero-section {
+      .container {
+        overflow: hidden;
+        .right-side {
+          right: -50px;
+          img {
+            max-width: 230px;
+            max-height: 220px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
     .events {
       .container {
         gap: 50px;
@@ -618,11 +677,16 @@ main.main {
       overflow: visible;
       padding: 40px 0;
 
+      &__hidden-content {
+        display: none;
+      }
+
       .container {
+        overflow: hidden;
+        gap: 0;
 
         .left-side {
-          max-width: 255px;
-          width: 100%;
+          max-width: 100%;
 
           &__title {
             font-size: 2.25rem;
@@ -633,6 +697,8 @@ main.main {
             font-size: 0.875rem;
             line-height: 110%;
             margin-top: 20px;
+            max-width: 245px;
+            width: 100%;
           }
 
           &__button {
@@ -641,13 +707,11 @@ main.main {
         }
 
         .right-side {
-          max-width: 145px;
-          max-height: 144.75px;
-          width: 100%;
-          height: 100%;
           img {
-            max-width: 145px;
-            max-height: 144.75px;
+            max-width: 136px;
+            max-height: 144px;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -671,16 +735,19 @@ main.main {
         }
 
         .events-slider {
-          max-width: 320px;
-          width: 100%;
+          max-width: 100%;
           .slider {
             .slider-card {
               gap: 0;
               flex-direction: column;
+              align-items: center;
 
               .card-info {
-                align-items: center;
+                display: flex;
                 padding: 25px 20px 20px 20px;
+                max-width: 100%;
+                flex-direction: column;
+                align-items: center;
 
                 &__title {
                   margin-top: 20px;
@@ -705,7 +772,10 @@ main.main {
                 }
               }
 
+
               .card-poster {
+                display: flex;
+                justify-content: center;
                 max-height: 320px;
                 height: 100%;
                 width: 100%;
@@ -718,6 +788,7 @@ main.main {
                   display: flex;
                   max-height: 320px;
                   height: 100%;
+                  border-radius: 20px;
                 }
               }
 
@@ -764,7 +835,18 @@ main.main {
   }
 
   main.main {
+    .hero-section {
 
+      .container {
+
+        .left-side {
+          &__button {
+            margin-top: 30px;
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 
