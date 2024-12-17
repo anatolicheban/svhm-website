@@ -468,15 +468,42 @@ main.main {
         }
       }
     }
-
-
-
-
-
   }
 
 }
 
+
+@media (max-width: 1320px) {
+  main.main {
+
+    .stairs {
+      .container {
+
+      }
+      .stairs-content {
+        .grid {
+          gap: 10px;
+          .grid-item {
+            &__title {
+            }
+            &__text {
+            }
+            .grid-item-list {
+              &__item {
+
+              }
+            }
+          }
+
+          .grid-item-second {
+
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 1280px) {
   main.main {
@@ -588,6 +615,81 @@ main.main {
         gap: 30px;
         text-align: center;
         flex-direction: column;
+      }
+    }
+
+    .stairs {
+      .container {
+
+      }
+      .stairs-content {
+        .grid {
+          .grid-item {
+            &__title {
+            }
+            &__text {
+            }
+            .grid-item-list {
+              &__item {
+
+              }
+            }
+          }
+
+          .grid-item-second {
+            margin-top: 20px;
+          }
+        }
+
+        .steps {
+          height: 935px;
+
+          .step {
+
+          }
+
+          .step-1 {
+            left: calc(-207.5px / 2);
+            top: calc((100% - 42px) / 2);
+            height: 6.26%;
+          }
+
+          .step-2 {
+            left: calc(8.47% / 2);
+            top: calc((100% - 18.78%) /2);
+            height: calc(14.74% + 6.26%);
+          }
+
+          .step-3 {
+            left: calc((8.47% * 3) / 2);
+            top: calc((100% - 35.74%) / 2 );
+            height: 35.74%
+          }
+
+          .step-4 {
+            left: calc((8.47% * 5) / 2);
+            top: calc((100% - 50.48%) / 2);
+            height: 50.48%
+          }
+
+          .step-5 {
+            left: calc(8.47% * 7);
+            top: calc(100% - 65.22%);
+            height: 65.22%;
+          }
+
+          .step-6 {
+            left: calc(8.47% * 9);
+            top: calc(100% - 79.96%);
+            height: 79.96%;
+          }
+
+          .step-7 {
+            left: calc(8.47% * 11);
+            top: calc(100% - 94.7%);
+            height: 94.7%;
+          }
+        }
       }
     }
   }
@@ -735,9 +837,12 @@ main.main {
         }
 
         .events-slider {
-          max-width: 100%;
+          width: 100%;
           .slider {
+            width: 100%;
+            display: flex;
             .slider-card {
+              border-radius: 30px;
               gap: 0;
               flex-direction: column;
               align-items: center;
@@ -782,6 +887,7 @@ main.main {
 
                 .card-poster-img {
                   display: none;
+
                 }
 
                 .card-poster-img-adaptive {
@@ -789,6 +895,7 @@ main.main {
                   max-height: 320px;
                   height: 100%;
                   border-radius: 20px;
+                  width: 100%;
                 }
               }
 

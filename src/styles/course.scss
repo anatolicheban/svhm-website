@@ -300,3 +300,285 @@ main.main {
     }
   }
 }
+
+@media (max-width: 1280px) {
+
+  main.main {
+
+  }
+}
+
+@media (max-width: 1200px) {
+  main.main {
+    .hero-section-course {
+      .container {
+        gap: 32px;
+      }
+    }
+
+    .expertise {
+
+      &__img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .expertise-info {
+          gap: 15px;
+          .expertise-info-list {
+            gap: 10px;
+            max-width: 650px;
+
+            &__list {
+              max-width: 650px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+
+  main.main {
+    .hero-section-course {
+
+      padding: 60px 0;
+
+      .container {
+        flex-direction: column;
+        align-items: start;
+        gap: 50px;
+
+        .hero-section-info {
+          max-width: 454px;
+          width: 100%;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+
+}
+
+@media (max-width: 768px) {
+
+  .container {
+
+  }
+
+
+  main.main {
+    .hero-section-course {
+      .container {
+        img {
+          max-height: 350px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .expertise {
+      padding: 60px 0;
+
+      &__img {
+        max-height: 350px;
+        border-radius: 20px;
+      }
+
+      .container {
+        .expertise-info {
+
+
+          .expertise-info-list {
+            gap: 10px;
+            max-width: 665px;
+            width: 100%;
+          }
+        }
+      }
+
+    }
+
+    .questions-course {
+      .container {
+        .questions-box {
+          .questions-box-item {
+            padding-right: 100px;
+
+            &__button {
+              top: 35%;
+            }
+
+            &.active .button {
+              bottom: 15px;
+            }
+
+            .item-question-container {
+
+              &__number {
+                white-space: nowrap;
+              }
+
+              &__question {
+                width: 95%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+
+  main.main {
+    .hero-section-course {
+      padding: 40px 0;
+      .container {
+        gap: 30px;
+
+        .hero-section-info {
+          max-width: 100%;
+
+          &__lessons {
+            font-size: 1.125rem;
+            line-height: 110%;
+          }
+
+          &__title {
+            font-size: 2.25rem;
+            line-height: 110%;
+            margin-top: 15px;
+          }
+
+          &__text {
+            font-size: 0.875rem;
+            line-height: 140%;
+            margin-top: 15px;
+          }
+
+          &__button {
+            margin-top: 30px;
+            width: 100%;
+          }
+        }
+
+        img {
+          border-radius: 20px;
+        }
+      }
+    }
+
+    .expertise {
+
+      padding: 40px 0;
+
+      &__img {
+        max-height: 200px;
+      }
+
+      .container {
+        gap: 30px;
+
+        .expertise-info {
+
+          &__title {
+            font-size: 1.5rem;
+            line-height: 110%;
+          }
+
+          .expertise-info-list {
+            max-width: 350px;
+
+            &__item {
+              font-size: 0.875rem;
+              line-height: 140%;
+            }
+          }
+        }
+      }
+
+    }
+
+    .questions-course {
+      .container {
+        .questions-box {
+          .questions-box-item {
+            padding: 10px 20px ;
+            .item-question-container {
+              align-items: center;
+              &__number {
+                text-align: center;
+                white-space: unset;
+                font-size: 1.125rem;
+                line-height: 110%;
+              }
+
+              &__question {
+                width: 100%;
+                font-size: 1.125rem;
+                line-height: 110%;
+              }
+            }
+
+            &__answer {
+              .questions-box-item-list {
+                .questions-box-item-list-element {
+                  font-size: 0.875rem;
+                  line-height: 140%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+}
+
+@media (max-width: 414px) {
+
+  .container {
+
+  }
+
+
+  main.main {
+
+  }
+}
+
+@media (max-width: 360px) {
+
+  .container {
+  }
+
+  main.main {
+
+  }
+
+}
