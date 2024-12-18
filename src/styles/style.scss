@@ -1629,7 +1629,6 @@ footer.footer {
     .container {
       .nav-menu {
         display: flex;
-        gap: 10px;
       }
 
       .hamburger {
@@ -1700,6 +1699,16 @@ footer.footer {
 
     .questions {
       padding: 60px 0;
+
+      .container {
+        .questions-box {
+          .questions-box-item {
+            &.active button {
+              bottom: 15px;
+            }
+          }
+        }
+      }
     }
 
     .about-us-section {
@@ -1886,8 +1895,8 @@ footer.footer {
             }
 
             &.active button {
-              bottom: 15px;
-              right: 15px;
+              bottom: 10px;
+              right: 10px;
             }
 
             &__answer {
