@@ -244,6 +244,12 @@ main.main {
           .blog-box-item {
             max-width: 100%;
 
+            .blog-box-info {
+              &__text {
+                max-width: 100%;
+              }
+            }
+
             &__field {
               bottom: 47%;
             }

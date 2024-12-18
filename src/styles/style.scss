@@ -1692,6 +1692,11 @@ footer.footer {
 
           .blog-box-item {
             max-width: 100%;
+            .blog-box-info {
+              &__text {
+                max-width: 100%;
+              }
+            }
           }
         }
       }
@@ -2128,6 +2133,7 @@ footer.footer {
           gap: 15px;
           .faq-box-item {
             padding: 20px;
+            border-radius: 20px;
 
             &__question {
               font-size: 1.125rem;
