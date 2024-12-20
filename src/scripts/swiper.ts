@@ -17,13 +17,12 @@ document.querySelector('.pagination-buttons__button_prev').addEventListener('cli
     swiper.slidePrev();
 });
 
-// Кнопка "Следующий"
 document.querySelector('.pagination-buttons__button_next').addEventListener('click', () => {
     swiper.slideNext();
 });
 
 swiper.on('slideChange', function () {
-    const activeIndex = swiper.realIndex;  // Используем realIndex для учета loop
+    const activeIndex = swiper.realIndex;
 
     const dots = document.querySelectorAll('.pagination-dots__item');
 
