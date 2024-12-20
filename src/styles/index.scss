@@ -85,19 +85,18 @@ main.main {
       gap: 76px;
     }
 
-    .events-slider {
+    .swiper {
+      width: 100%;
       display: flex;
-      gap: 30px;
+      align-items: center;
+      flex-direction: column;
+      max-width: 680px;
 
-      .slider {
-
+      .swiper-wrapper {
         max-width: 680px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        .slider-card {
+        .swiper-slide {
           border: 1px solid $primary-color;
           border-radius: 50px;
           justify-content: space-between;
@@ -179,65 +178,65 @@ main.main {
             }
           }
         }
+      }
 
-        .slider-pagination {
-          margin-top: 30px;
+      .slider-pagination {
+        margin-top: 30px;
 
-          .pagination-buttons {
-            display: flex;
-            gap: 17.06px;
+        .pagination-buttons {
+          display: flex;
+          gap: 17.06px;
 
-            &__button {
-              padding: 12.27px 9.27px 12.46px 9.66px;
-              border-radius: 100px;
-              border: 1px solid $primary-color;
-              background: transparent;
+          &__button {
+            padding: 12.27px 9.27px 12.46px 9.66px;
+            border-radius: 100px;
+            border: 1px solid $primary-color;
+            background: transparent;
+            transition: 0.25s all;
+
+            .button-arrow-icon {
               transition: 0.25s all;
+            }
 
-              .button-arrow-icon {
-                transition: 0.25s all;
-              }
+            &:hover {
+              background: $blue-color;
+              border-color: $blue-color;
+            }
 
-              &:hover {
-                background: $blue-color;
-                border-color: $blue-color;
-              }
+            &:hover .button-arrow-icon {
+              filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
+            }
 
-              &:hover .button-arrow-icon {
-                filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
-              }
+            &.disabled {
+              opacity: 50%;
+            }
+          }
 
-              &.disabled {
-                opacity: 50%;
+          &__button_prev {
+            img {
+              transform: rotate(180deg);
+            }
+          }
+
+          .pagination-dots {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            &__item {
+              width: 4px;
+              height: 4px;
+              border-radius: 100px;
+              background: $primary-color;
+              opacity: 40%;
+
+              &.active {
+                color: $primary-color;
+                transform: scale(2);
+                opacity: 100%;
               }
             }
 
-            &__button_prev {
-              img {
-                transform: rotate(180deg);
-              }
-            }
-
-            .pagination-dots {
-              display: flex;
-              gap: 10px;
-              align-items: center;
-
-              &__item {
-                width: 4px;
-                height: 4px;
-                border-radius: 100px;
-                background: $primary-color;
-                opacity: 40%;
-
-                &.active {
-                  color: $primary-color;
-                  transform: scale(2);
-                  opacity: 100%;
-                }
-              }
-
-            }
           }
         }
       }
@@ -516,8 +515,9 @@ main.main {
         align-items: center;
         flex-wrap: wrap;
 
-        .event-slider {
+        .swiper {
           order: 2;
+          max-width: 680px;
         }
 
         .event-info {
@@ -805,6 +805,14 @@ main.main {
           max-width: 100%;
           text-align: start;
         }
+
+        .swiper {
+          .swiper-wrapper {
+            .swiper-slide {
+              gap: 16px;
+            }
+          }
+        }
       }
     }
 
@@ -896,12 +904,12 @@ main.main {
           }
         }
 
-        .events-slider {
+        .swiper {
           width: 100%;
-          .slider {
+          .swiper-wrapper {
             width: 100%;
             display: flex;
-            .slider-card {
+            .swiper-slide {
               border-radius: 30px;
               gap: 0;
               flex-direction: column;
@@ -952,7 +960,6 @@ main.main {
 
                 .card-poster-img-adaptive {
                   display: flex;
-                  max-height: 320px;
                   height: 100%;
                   border-radius: 20px;
                   width: 100%;

@@ -4,6 +4,10 @@
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/images/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Vite + TS</title>
 </head>
 <body class="transition-disabled">
@@ -76,9 +80,9 @@
         </section>
         <section class="events">
             <div class="container">
-                <div class="events-slider">
-                    <div class="slider">
-                        <div class="slider-card">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                             <div class="card-info">
                                 <img src="./public/images/event-card-logo.svg" alt="card-logo">
                                 <h2 class="card-info__title">НАЗВА ІВЕНТУ</h2>
@@ -90,30 +94,54 @@
                                 <img class="card-poster-img-adaptive" src="./public/images/card-poster-adaptive.svg" alt="card-poster">
                             </div>
                         </div>
-                        <div class="slider-pagination">
-                            <div class="pagination-buttons">
-                                <button
-                                        class="pagination-buttons__button pagination-buttons__button_prev"
-                                >
-                                    <img
-                                            class="button-arrow-icon"
-                                            src="./public/images/right-arrow-button-small.svg"
-                                            alt="prev-slide"
-                                    />
-                                </button>
-                                <div class="pagination-dots">
-                                    <span class="pagination-dots__item event-item"></span>
-                                    <span class="pagination-dots__item event-item active"></span>
-                                    <span class="pagination-dots__item event-item"></span>
-                                </div>
-                                <button class="pagination-buttons__button pagination-buttons__button_next">
-                                    <img
-                                            class="button-arrow-icon"
-                                            src="./public/images/right-arrow-button-small.svg"
-                                            alt="next-slide"
-                                    />
-                                </button>
+                        <div class="swiper-slide">
+                            <div class="card-info">
+                                <img src="./public/images/event-card-logo.svg" alt="card-logo">
+                                <h2 class="card-info__title">НАЗВА ІВЕНТУ</h2>
+                                <p class="card-info__text">онлайн | 21.01.2025</p>
+                                <button class="card-info__button"><a href="./event.html">ДОКЛАДНІШЕ</a></button>
                             </div>
+                            <div class="card-poster">
+                                <img class="card-poster-img" src="./public/images/card-poster.svg" alt="card-poster">
+                                <img class="card-poster-img-adaptive" src="./public/images/card-poster-adaptive.svg" alt="card-poster">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-info">
+                                <img src="./public/images/event-card-logo.svg" alt="card-logo">
+                                <h2 class="card-info__title">НАЗВА ІВЕНТУ</h2>
+                                <p class="card-info__text">онлайн | 23.01.2025</p>
+                                <button class="card-info__button"><a href="./event.html">ДОКЛАДНІШЕ</a></button>
+                            </div>
+                            <div class="card-poster">
+                                <img class="card-poster-img" src="./public/images/card-poster.svg" alt="card-poster">
+                                <img class="card-poster-img-adaptive" src="./public/images/card-poster-adaptive.svg" alt="card-poster">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination">
+                        <div class="pagination-buttons">
+                            <button
+                                    class="pagination-buttons__button pagination-buttons__button_prev"
+                            >
+                                <img
+                                        class="button-arrow-icon"
+                                        src="./public/images/right-arrow-button-small.svg"
+                                        alt="prev-slide"
+                                />
+                            </button>
+                            <div class="pagination-dots">
+                                <span class="pagination-dots__item event-item"></span>
+                                <span class="pagination-dots__item event-item"></span>
+                                <span class="pagination-dots__item event-item"></span>
+                            </div>
+                            <button class="pagination-buttons__button pagination-buttons__button_next">
+                                <img
+                                        class="button-arrow-icon"
+                                        src="./public/images/right-arrow-button-small.svg"
+                                        alt="next-slide"
+                                />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -467,5 +495,6 @@
     </footer>
 </div>
 <script type="module" src="/src/scripts/main.ts"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

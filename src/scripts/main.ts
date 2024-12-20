@@ -1,4 +1,5 @@
 import "../styles/style.scss";
+import "./swiper.ts";
 
 document.querySelectorAll(".questions-box-item").forEach((item) => {
   item.addEventListener("click", () => {
