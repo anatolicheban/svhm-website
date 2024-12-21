@@ -54,9 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const backButton = document.querySelector('.back-button');
 
   function toggleMenu() {
-    menu.classList.toggle('open');
+    menu?.classList.toggle('open');
   }
 
-  hamburger.addEventListener('click', toggleMenu);
-  backButton.addEventListener('click', toggleMenu);
+  if (hamburger) {
+    hamburger.addEventListener('click', toggleMenu);
+  }
+
+  if (backButton) {
+    backButton.addEventListener('click', toggleMenu);
+  }
 });
