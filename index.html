@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/svhm-website/images/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>Vite + TS</title>
-  <script type="module" crossorigin src="/svhm-website/assets/main-BV7wP_0S.js"></script>
-  <link rel="stylesheet" crossorigin href="/svhm-website/assets/main-5Q0rHjYv.css">
+  <script type="module" crossorigin src="/svhm-website/assets/main-BoyqafpR.js"></script>
+  <link rel="stylesheet" crossorigin href="/svhm-website/assets/main-Cz2nY21c.css">
 </head>
 <body class="transition-disabled">
 <div class="content-wrapper">
@@ -28,8 +31,25 @@
                     </button>
                 </div>
             </nav>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </header>
+    <div class="menu" id="menu">
+        <button class="back-button"><img src="data:image/svg+xml,%3csvg%20width='17'%20height='12'%20viewBox='0%200%2017%2012'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.27246%205.90443H16.3406M1.27246%205.90443L5.90882%2010.5408M1.27246%205.90443L5.90882%201.26807'%20stroke='%23FFFCF8'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="back-button"/></button>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-list__item"><a href="./event.html">ІВЕНТИ</a></li>
+                <li class="nav-list__item"><a href="./all-courses.html">ВСІ КУРСИ</a></li>
+                <li class="nav-list__item"><a href="./about.html">ПРО НАС</a></li>
+                <li class="nav-list__item"><a href="./blogs.html">БЛОГ</a></li>
+            </ul>
+        </nav>
+        <button class="footer-button">ЗВ'ЯЗАТИСЬ З НАМИ</button>
+    </div>
     <main class="main">
         <section class="hero-section">
             <div class="container">
@@ -61,9 +81,9 @@
         </section>
         <section class="events">
             <div class="container">
-                <div class="events-slider">
-                    <div class="slider">
-                        <div class="slider-card">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                             <div class="card-info">
                                 <img src="/svhm-website/assets/event-card-logo-Cm9fSrQr.svg" alt="card-logo">
                                 <h2 class="card-info__title">НАЗВА ІВЕНТУ</h2>
@@ -71,33 +91,58 @@
                                 <button class="card-info__button"><a href="./event.html">ДОКЛАДНІШЕ</a></button>
                             </div>
                             <div class="card-poster">
-                                <img src="/svhm-website/assets/card-poster-C5mVNGH_.svg" alt="card-poster">
+                                <img class="card-poster-img" src="/svhm-website/assets/card-poster-C5mVNGH_.svg" alt="card-poster">
+                                <img class="card-poster-img-adaptive" src="/svhm-website/assets/card-poster-adaptive-CaT3oOt0.svg" alt="card-poster">
                             </div>
                         </div>
-                        <div class="slider-pagination">
-                            <div class="pagination-buttons">
-                                <button
-                                        class="pagination-buttons__button pagination-buttons__button_prev"
-                                >
-                                    <img
-                                            class="button-arrow-icon"
-                                            src="data:image/svg+xml,%3csvg%20width='17'%20height='11'%20viewBox='0%200%2017%2011'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.2915%205.83595H1.22332M16.2915%205.83595L11.6551%2010.4723M16.2915%205.83595L11.6551%201.19958'%20stroke='%23191A1A'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                                            alt="prev-slide"
-                                    />
-                                </button>
-                                <div class="pagination-dots">
-                                    <span class="pagination-dots__item event-item"></span>
-                                    <span class="pagination-dots__item event-item active"></span>
-                                    <span class="pagination-dots__item event-item"></span>
-                                </div>
-                                <button class="pagination-buttons__button pagination-buttons__button_next">
-                                    <img
-                                            class="button-arrow-icon"
-                                            src="data:image/svg+xml,%3csvg%20width='17'%20height='11'%20viewBox='0%200%2017%2011'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.2915%205.83595H1.22332M16.2915%205.83595L11.6551%2010.4723M16.2915%205.83595L11.6551%201.19958'%20stroke='%23191A1A'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                                            alt="next-slide"
-                                    />
-                                </button>
+                        <div class="swiper-slide">
+                            <div class="card-info">
+                                <img src="/svhm-website/assets/event-card-logo-Cm9fSrQr.svg" alt="card-logo">
+                                <h2 class="card-info__title">НАЗВА ІВЕНТУ</h2>
+                                <p class="card-info__text">онлайн | 21.01.2025</p>
+                                <button class="card-info__button"><a href="./event.html">ДОКЛАДНІШЕ</a></button>
                             </div>
+                            <div class="card-poster">
+                                <img class="card-poster-img" src="/svhm-website/assets/card-poster-C5mVNGH_.svg" alt="card-poster">
+                                <img class="card-poster-img-adaptive" src="/svhm-website/assets/card-poster-adaptive-CaT3oOt0.svg" alt="card-poster">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card-info">
+                                <img src="/svhm-website/assets/event-card-logo-Cm9fSrQr.svg" alt="card-logo">
+                                <h2 class="card-info__title">НАЗВА ІВЕНТУ</h2>
+                                <p class="card-info__text">онлайн | 23.01.2025</p>
+                                <button class="card-info__button"><a href="./event.html">ДОКЛАДНІШЕ</a></button>
+                            </div>
+                            <div class="card-poster">
+                                <img class="card-poster-img" src="/svhm-website/assets/card-poster-C5mVNGH_.svg" alt="card-poster">
+                                <img class="card-poster-img-adaptive" src="/svhm-website/assets/card-poster-adaptive-CaT3oOt0.svg" alt="card-poster">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination">
+                        <div class="swiper-pagination-buttons">
+                            <button
+                                    class="swiper-pagination-buttons__button swiper-pagination-buttons__button_prev"
+                            >
+                                <img
+                                        class="button-arrow-icon"
+                                        src="data:image/svg+xml,%3csvg%20width='17'%20height='11'%20viewBox='0%200%2017%2011'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.2915%205.83595H1.22332M16.2915%205.83595L11.6551%2010.4723M16.2915%205.83595L11.6551%201.19958'%20stroke='%23191A1A'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                        alt="prev-slide"
+                                />
+                            </button>
+                            <div class="pagination-dots">
+                                <span class="pagination-dots__item event-item"></span>
+                                <span class="pagination-dots__item event-item"></span>
+                                <span class="pagination-dots__item event-item"></span>
+                            </div>
+                            <button class="swiper-pagination-buttons__button swiper-pagination-buttons__button_next">
+                                <img
+                                        class="button-arrow-icon"
+                                        src="data:image/svg+xml,%3csvg%20width='17'%20height='11'%20viewBox='0%200%2017%2011'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.2915%205.83595H1.22332M16.2915%205.83595L11.6551%2010.4723M16.2915%205.83595L11.6551%201.19958'%20stroke='%23191A1A'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                                        alt="next-slide"
+                                />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -213,7 +258,7 @@
                                 Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу. Ми об'єднали сучасні знання та досвід експертів, щоб допомогти вам закрити ключові прогалини та підготуватися до актуальних викликів ринку. Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу.
                             </p>
                         </div>
-                        <div class="grid-item"></div>
+                        <div class="grid-item top-right"></div>
                         <div class="grid-item"></div>
                         <div class="grid-item grid-item-second bottom-right">
                             <h1 class="grid-item__title grid-item-second__title">ЯК?</h1>
@@ -232,7 +277,7 @@
                         <div class="step step-4"></div>
                         <div class="step step-5"></div>
                         <div class="step step-6"></div>
-                        <div class="step step-7"></div>
+                        <div class="step step-7 adaptive-step"></div>
                     </div>
                 </div>
             </div>
@@ -273,7 +318,7 @@
                     <p class="blog-info__text">Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу. </p>
                 </div>
                 <div class="blog-box">
-                    <div class="blog-box-item">
+                    <a href="./article.html" class="blog-box-item">
                         <div class="blog-box-item-image">
                             <div class="blog-box-item-image__field">монетизація</div>
                             <img class="blog-box-item-image__img" src="/svhm-website/assets/blog-card-1-DlVMHT6U.svg" alt="blog-card-1">
@@ -284,8 +329,8 @@
                                 інструментів, щоб втілювати свої ідеї у
                                 реальність. Два найпопулярніших – Figma і</p>
                         </div>
-                    </div>
-                    <div class="blog-box-item">
+                    </a>
+                    <a href="./article.html" class="blog-box-item">
                         <div class="blog-box-item-image">
                             <div class="blog-box-item-image__field">монетизація</div>
                             <img class="blog-box-item-image__img" src="/svhm-website/assets/blog-card-2-VFLVP2kO.svg" alt="blog-card-2">
@@ -296,8 +341,8 @@
                                 інструментів, щоб втілювати свої ідеї у
                                 реальність. Два найпопулярніших – Figma і i</p>
                         </div>
-                    </div>
-                    <div class="blog-box-item">
+                    </a>
+                    <a href="./article.html" class="blog-box-item">
                         <div class="blog-box-item-image">
                             <div class="blog-box-item-image__field">монетизація</div>
                             <img class="blog-box-item-image__img" src="/svhm-website/assets/blog-card-3-CXHUo-Fe.svg" alt="blog-card-3">
@@ -308,7 +353,7 @@
                                 інструментів, щоб втілювати свої ідеї у
                                 реальність. Два найпопулярніших – Figma і</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <a href="./blogs.html" class="more-text">Показати ще</a>
             </div>
@@ -380,6 +425,7 @@
                                 value="ПІДПИСАТИСЬ"
                         />
                     </form>
+                    <button class="newsletter-box__button-form">ПІДПИСАТИСЬ</button>
                 </div>
             </div>
         </section>
