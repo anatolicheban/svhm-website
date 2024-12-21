@@ -382,7 +382,7 @@ main.main {
 
       &__img {
         order: 2;
-        max-width: 100%;
+        max-width: 900px;
         max-height: 100%;
         object-fit: cover;
       }
@@ -390,12 +390,14 @@ main.main {
       .container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 40px;
 
         .location-info {
           order: 1;
           gap: 15px;
           max-width: 100%;
+          align-items: start;
 
           &__text {
           }
@@ -414,16 +416,17 @@ main.main {
 
       .container {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         gap: 50px;
 
         .hero-section-info {
           max-width: 100%;
           width: 100%;
+          align-items: start;
         }
 
         img {
-          max-width: 100%;
+          aspect-ratio: 2;
           max-height: 350px;
           object-fit: cover;
           border-radius: 50px;
@@ -543,8 +546,10 @@ main.main {
         }
 
         img {
-          border-radius: 20px;
-          max-height: 200px;
+          aspect-ratio: 2;
+          max-height: 320px;
+          object-fit: cover;
+
         }
       }
     }
@@ -605,7 +610,6 @@ main.main {
 
         img {
           border-radius: 20px;
-          max-height: 200px;
         }
       }
     }
@@ -668,7 +672,8 @@ main.main {
       padding: 40px 0;
 
       &__img {
-        max-height: 200px;
+        max-height: 100%;
+        aspect-ratio: 2;
         border-radius: 20px;
       }
 
@@ -697,6 +702,25 @@ main.main {
     }
   }
 
+}
+
+@media (max-width: 440px) {
+
+  .container {
+  }
+
+
+  main.main {
+    .hero-section-event {
+      .container {
+        img {
+          aspect-ratio: 1.5;
+          max-height: 200px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 414px) {

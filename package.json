@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@types/node": "^22.10.1",
-    "sass": "^1.81.1"
+    "sass": "^1.81.1",
+    "swiper": "^11.1.15"
   }
 }

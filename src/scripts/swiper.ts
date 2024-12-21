@@ -1,36 +1,52 @@
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
 
-const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-        el: '',
-    },
-    navigation: {
-        nextEl: '',
-        prevEl: '',
-    },
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const swiperContainer = document.querySelector('.swiper');
 
-document.querySelector('.pagination-buttons__button_prev').addEventListener('click', () => {
-    swiper.slidePrev();
-});
+    if (swiperContainer) {
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            grabCursor: true,
+            speed: 700,
+            pagination: {
+                el: '',
+            },
+            navigation: {
+                nextEl: '',
+                prevEl: '',
+            },
+        });
 
-document.querySelector('.pagination-buttons__button_next').addEventListener('click', () => {
-    swiper.slideNext();
-});
+        const prevButton = document.querySelector('.swiper-pagination-buttons__button_prev');
+        const nextButton = document.querySelector('.swiper-pagination-buttons__button_next');
 
-swiper.on('slideChange', function () {
-    const activeIndex = swiper.realIndex;
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                swiper.slidePrev();
+            });
+        }
 
-    const dots = document.querySelectorAll('.pagination-dots__item');
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                swiper.slideNext();
+            });
+        }
 
-    dots.forEach(dot => dot.classList.remove('active'));
+        swiper.on('slideChange', function () {
+            const activeIndex = swiper.realIndex;
 
-    if (activeIndex >= 3) {
-        dots[0].classList.add('active');
-    } else {
-        dots[activeIndex].classList.add('active');
+            const dots = document.querySelectorAll('.pagination-dots__item');
+
+            dots.forEach((dot) => dot.classList.remove('active'));
+
+            if (activeIndex >= 3) {
+                dots[0]?.classList.add('active');
+            } else {
+                dots[activeIndex]?.classList.add('active');
+            }
+        });
     }
 });

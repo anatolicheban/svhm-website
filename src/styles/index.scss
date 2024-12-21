@@ -183,7 +183,7 @@ main.main {
       .slider-pagination {
         margin-top: 30px;
 
-        .pagination-buttons {
+        .swiper-pagination-buttons {
           display: flex;
           gap: 17.06px;
 
@@ -888,6 +888,7 @@ main.main {
     }
 
     .events {
+      padding: 40px 0;
       .container {
         gap: 30px;
         .event-info {
@@ -1065,7 +1066,7 @@ main.main {
     }
 
     .courses-home {
-
+      padding: 40px 0;
       .container {
         gap: 30px;
 
