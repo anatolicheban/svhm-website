@@ -510,9 +510,10 @@ main.main {
       display: grid;
       grid-template-columns: 2fr 2fr;
       gap: 30px;
+      align-items: baseline;
 
       .conditions-box-item {
-        padding: 40px 50px;
+        padding: 40px 25px 40px 50px;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -524,47 +525,77 @@ main.main {
         cursor: pointer;
 
         &:hover {
-          background-color: $blue-color;
-          color: $secondary-color;
-          border: 1px solid $secondary-color;
+          border-color: $blue-color;
+          background: $blue-color;
         }
 
-        &:hover .item-line {
-          border-top: 1px solid rgb(255, 252, 248);
+        &:hover .question {
+          span, h3 {
+            color: $secondary-color;
+          }
         }
 
-        .item-header-container {
+        &.active {
+          background: $blue-color;
+          border-color: $blue-color;
+          border-radius: 25px;
+        }
+
+        &.active .question {
+          span, h3 {
+            color: $secondary-color;
+          }
+        }
+
+        &.active .answer {
+          display: block;
+          max-height: 500px;
+          opacity: 1;
+        }
+
+        .arrow {
+          font-size: 1.3rem;
+          transition: 0.25s all;
+          margin-left: auto;
+        }
+
+        &.active {
+          .arrow {
+            transform: rotate(180deg);
+          }
+        }
+
+        &__question {
           display: flex;
-          justify-content: space-between;
           align-items: center;
-
-          &__number {
-            font-size: 2rem;
-            line-height: 35.2px;
-            font-weight: 300;
-          }
-
-          &__title {
-            font-size: 2rem;
-            line-height: 35.2px;
-            font-weight: 600;
-            padding-left: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex: 1;
-          }
+          gap: 15px;
         }
 
-        &__line {
-          border: none;
-          border-top: 1px solid rgb(25, 26, 26);
-          width: 100%;
+        &__question-title {
+          font-size: 2rem;
+          line-height: 35.2px;
+          font-weight: 600;
+          color: $primary-color;
+          gap: 20px;
         }
 
-        &__text {
+        &__question-number {
+          font-size: 2rem;
+          line-height: 35.2px;
+          font-weight: 300;
+        }
+
+        &__answer {
+          padding-top: 15px;
           font-size: 1.5rem;
           line-height: 33.6px;
+          color: $secondary-color;
+          display: none;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transition: 0.25s all;
+          border-top: 1px solid $secondary-color;
         }
       }
     }
@@ -874,104 +905,6 @@ main.main {
     }
   }
 
-  .conditions {
-    padding: 90px 0;
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
-    }
-
-    .conditions__title {
-      font-size: 2.75rem;
-      line-height: 48.4px;
-      font-weight: 700;
-      color: $primary-color;
-    }
-
-    .conditions-box {
-      display: grid;
-      grid-template-columns: 2fr 2fr;
-      gap: 30px;
-      align-items: baseline;
-
-      .conditions-box-item {
-        padding: 40px 50px 40px 50px;
-        border: 1px solid $primary-color;
-        border-radius: 25px;
-        display: flex;
-        gap: 15px;
-        flex-direction: column;
-        transition: 0.25s all;
-        cursor: pointer;
-
-        &:hover {
-          border-color: $blue-color;
-          background: $blue-color;
-        }
-
-        &:hover .question {
-          span, h3 {
-            color: $secondary-color;
-          }
-        }
-
-        &.active {
-          background: $blue-color;
-          border-color: $blue-color;
-          border-radius: 25px;
-        }
-
-        &.active .question {
-          span, h3 {
-            color: $secondary-color;
-          }
-        }
-
-        &.active .answer {
-          display: block;
-          max-height: 500px;
-          opacity: 1;
-        }
-
-        &__question {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-        }
-
-        &__question-title {
-          font-size: 2rem;
-          line-height: 35.2px;
-          font-weight: 600;
-          color: $primary-color;
-          gap: 20px;
-        }
-
-        &__question-number {
-          font-size: 2rem;
-          line-height: 35.2px;
-          font-weight: 300;
-        }
-
-
-        &__answer {
-          padding-top: 15px;
-          font-size: 1.5rem;
-          line-height: 33.6px;
-          color: $secondary-color;
-          display: none;
-          max-height: 0;
-          opacity: 0;
-          overflow: hidden;
-          transition: 0.25s all;
-          border-top: 1px solid $secondary-color;
-        }
-      }
-    }
-  }
-
   .faq {
     padding: 90px 0;
 
@@ -1004,6 +937,12 @@ main.main {
         transition: 0.25s all;
         cursor: pointer;
 
+        &.active {
+          .arrow {
+            transform: rotate(180deg);
+          }
+        }
+
         &:hover {
           border-color: $blue-color;
           background: $blue-color;
@@ -1036,6 +975,12 @@ main.main {
           line-height: 35.2px;
           font-weight: 600;
           color: $primary-color;
+
+          .arrow {
+            font-size: 1.3rem;
+            transition: 0.25s all;
+            margin-left: auto;
+          }
         }
 
         &__answer {
@@ -1832,7 +1777,7 @@ footer.footer {
           }
 
           &__text {
-            font-size: 0.875rem;
+            font-size: 1rem;
             line-height: 140%;
           }
         }
@@ -1847,7 +1792,7 @@ footer.footer {
               }
 
               &__text {
-                font-size: 0.875rem;
+                font-size: 1rem;
                 line-height: 140%;
               }
             }
@@ -1905,7 +1850,7 @@ footer.footer {
             }
 
             &__answer {
-              font-size: 0.875rem;
+              font-size: 1rem;
               line-height: 140%;
               width: 90%;
             }
@@ -1980,7 +1925,7 @@ footer.footer {
                 padding-bottom: 30px;
 
                 &__text {
-                  font-size: 0.875rem;
+                  font-size: 1rem;
                   line-height: 140%;
                 }
               }
@@ -2019,7 +1964,7 @@ footer.footer {
           }
 
           &__text {
-            font-size: 0.875rem;
+            font-size: 1rem;
             line-height: 140%;
           }
         }
@@ -2086,14 +2031,18 @@ footer.footer {
         .conditions-box {
           gap: 15px;
           .conditions-box-item {
-            padding: 20px;
+            padding: 20px 15px 20px 20px;
 
             .item-header-container {
 
             }
 
             &__question {
-              gap: 10px;
+              gap: 4px;
+
+              .arrow {
+                font-size: 0.7rem;
+              }
             }
 
             &__question-number {
@@ -2108,7 +2057,7 @@ footer.footer {
             }
 
             &__answer {
-              font-size: 0.875rem;
+              font-size: 1rem;
               line-height: 140%;
             }
           }
@@ -2138,10 +2087,14 @@ footer.footer {
             &__question {
               font-size: 1.125rem;
               line-height: 110%;
+
+              .arrow {
+                font-size: 0.7rem;
+              }
             }
 
             &__answer {
-              font-size: 0.875rem;
+              font-size: 1rem;
               line-height: 140%;
             }
           }
@@ -2182,7 +2135,7 @@ footer.footer {
             }
 
             &__email {
-              font-size: 0.875rem;
+              font-size: 1rem;
               color: rgba(25, 26, 26, 0.5);
               line-height: 140%;
               outline: none;
@@ -2327,7 +2280,7 @@ footer.footer {
               }
 
               &__text {
-                font-size: 0.875rem;
+                font-size: 1rem;
                 line-height: 140%;
               }
             }
@@ -2350,7 +2303,7 @@ footer.footer {
         &__text {
           max-width: 245px;
           width: 100%;
-          font-size: 0.875rem;
+          font-size: 1rem;
           line-height: 140%;
         }
       }
@@ -2382,7 +2335,7 @@ footer.footer {
         .conditions-box {
           gap: 15px;
           .conditions-box-item {
-            padding: 20px;
+            padding: 20px 15px 20px 20px;
             gap: 15px;
 
             .item-header-container {
@@ -2427,7 +2380,7 @@ footer.footer {
       .contacts-right-side {
         .contacts-form {
           &__item {
-            font-size: 0.875rem;
+            font-size: 1rem;
             line-height: 140%;
           }
         }

@@ -497,7 +497,7 @@ main.main {
             }
 
             &__text {
-              font-size: 0.875rem;
+              font-size: 1rem;
               line-height: 140%;
             }
 
@@ -518,13 +518,13 @@ main.main {
                 }
 
                 &__quote {
-                  font-size: 0.6975rem;
+                  font-size: 1rem;
                   line-height: 140%;
                 }
               }
 
               &__author {
-                font-size: 8.37px;
+                font-size: 0.875rem;
                 line-height: 140%;
               }
             }
@@ -538,7 +538,7 @@ main.main {
             padding: 16px 35px;
             gap: 30px;
             span {
-              font-size: 0.875rem;
+              font-size: 1rem;
               line-height: 140%;
 
             }
