@@ -513,7 +513,7 @@ main.main {
       align-items: baseline;
 
       .conditions-box-item {
-        padding: 40px 25px 40px 50px;
+        padding: 40px 25px 40px 25px;
         display: flex;
         flex-direction: column;
         gap: 15px;
@@ -565,7 +565,7 @@ main.main {
         &__question {
           display: flex;
           align-items: center;
-          gap: 15px;
+          gap: 10px;
         }
 
         &__question-title {
@@ -573,7 +573,7 @@ main.main {
           line-height: 35.2px;
           font-weight: 600;
           color: $primary-color;
-          gap: 20px;
+          gap: 15px;
         }
 
         &__question-number {
@@ -925,7 +925,7 @@ main.main {
       align-items: baseline;
 
       .faq-box-item {
-        padding: 40px 50px 40px 50px;
+        padding: 40px 25px 40px 25px;
         border: 1px solid $primary-color;
         border-radius: 25px;
         display: flex;
@@ -1412,6 +1412,38 @@ footer.footer {
       .container {
         flex-direction: column;
         gap: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1236px) {
+  main.main {
+    .conditions {
+      .conditions-box {
+        .conditions-box-item {
+
+          &__question-title {
+            font-size: 1.55rem;
+          }
+
+          &__question-number {
+            font-size: 1.55rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1132px) {
+  main.main {
+    .faq {
+      .faq-box {
+        .faq-box-item {
+          &__question {
+            font-size: 1.7rem;
+          }
+        }
       }
     }
   }
