@@ -530,9 +530,8 @@ main.main {
         }
 
         &:hover .question {
-          span, h3 {
-            color: $secondary-color;
-          }
+
+          filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
         }
 
         &.active {
@@ -542,9 +541,7 @@ main.main {
         }
 
         &.active .question {
-          span, h3 {
-            color: $secondary-color;
-          }
+          filter: brightness(0) saturate(100%) invert(100%) sepia(59%) saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
         }
 
         &.active .answer {
@@ -940,12 +937,19 @@ main.main {
         &.active {
           .arrow {
             transform: rotate(180deg);
+            filter: brightness(0) saturate(100%) invert(100%) sepia(59%)
+            saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
           }
         }
 
         &:hover {
           border-color: $blue-color;
           background: $blue-color;
+
+          .arrow {
+            filter: brightness(0) saturate(100%) invert(100%) sepia(59%)
+            saturate(275%) hue-rotate(11deg) brightness(109%) contrast(101%);
+          }
         }
 
         &:hover .question {
@@ -2016,8 +2020,6 @@ footer.footer {
 
     .conditions {
 
-
-
       padding: 40px 0;
 
       .container {
@@ -2041,7 +2043,8 @@ footer.footer {
               gap: 4px;
 
               .arrow {
-                font-size: 0.7rem;
+                max-width: 12px;
+                max-height: 6px;
               }
             }
 
@@ -2089,7 +2092,8 @@ footer.footer {
               line-height: 110%;
 
               .arrow {
-                font-size: 0.7rem;
+                max-width: 12px;
+                max-height: 6px;
               }
             }
 
