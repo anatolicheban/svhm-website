@@ -105,6 +105,7 @@ header.header {
       align-items: center;
 
       &__item {
+        text-transform: uppercase;
         font-size: 1rem;
         line-height: 17.6px;
         list-style: none;
@@ -122,6 +123,7 @@ header.header {
 
     .button-container {
       &__button {
+        text-transform: uppercase;
         font-size: 1rem;
         line-height: 17.6px;
         color: $secondary-color;
@@ -190,6 +192,7 @@ header.header {
       gap: 20px;
 
       &__item {
+        text-transform: uppercase;
         line-height: 110%;
         transition: 0.25s all;
 
@@ -1083,6 +1086,7 @@ main.main {
       max-width: 375px;
 
       &__title {
+        text-transform: uppercase;
         font-size: 3.375rem;
         line-height: 59.4px;
         font-weight: bold;
