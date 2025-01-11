@@ -133,6 +133,7 @@ header.header {
         border: 1px solid $secondary-color;
         transition: 0.25s all;
 
+
         &:hover {
           background: $secondary-color;
           border-color: $secondary-color;
@@ -217,6 +218,7 @@ header.header {
     margin-top: 30px;
     border: 1px solid $secondary-color;
     transition: 0.25s all;
+    text-align: center;
 
     &:hover {
       background: $secondary-color;
@@ -270,6 +272,12 @@ main.main {
           transition: 0.25s all;
 
           &:hover {
+            background: $blue-color;
+            border-color: $secondary-color;
+            color: $secondary-color;
+          }
+
+          &.active {
             background: $blue-color;
             border-color: $secondary-color;
             color: $secondary-color;
@@ -347,17 +355,11 @@ main.main {
               margin-top: 65px;
               border-radius: 300px;
               border: 1px solid $secondary-color;
-
-              a {
-                color: $secondary-color;
-                transition: 0.25s all;
-              }
+              display: inline-block;
+              color: $secondary-color;
 
               &:hover {
                 background: $secondary-color;
-              }
-
-              &:hover a {
                 color: $primary-color;
               }
 
@@ -416,6 +418,16 @@ main.main {
 
             &.disabled {
               opacity: 50%;
+              pointer-events: none;
+
+              &:hover {
+                background: transparent;
+                border-color: $primary-color;
+              }
+
+              &:hover .button-arrow-icon {
+                filter: none;
+              }
             }
           }
 
@@ -1048,17 +1060,11 @@ main.main {
       transition: 0.25s all;
       border-radius: 300px;
       border: 1px solid $primary-color;
-
-      a {
-        color: $primary-color;
-      }
+      display: inline-block;
 
       &:hover {
         background: $blue-color;
         border-color: $blue-color;
-      }
-
-      &:hover a {
         color: $secondary-color;
       }
 
@@ -1105,6 +1111,43 @@ main.main {
       max-width: 736px;
       width: 100%;
 
+      .contacts-message-box {
+        position: relative;
+        margin-top: 15px;
+      }
+
+      .contacts-message {
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        animation: fadeIn 0.3s ease;
+      }
+
+      .contacts-message--success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+
+      .contacts-message--error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       .contacts-form {
         display: flex;
         flex-direction: column;
@@ -1125,6 +1168,10 @@ main.main {
           font-size: 1.5rem;
           line-height: 33.6px;
           outline: none;
+
+          &.error {
+            border-bottom-color: #dc0000;
+          }
         }
 
         textarea {

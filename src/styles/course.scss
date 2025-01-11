@@ -44,6 +44,7 @@ main.main {
           transition: 0.25s all;
           border-radius: 300px;
           border: 1px solid $secondary-color;
+          display: inline-block;
 
           &:hover {
             background: $secondary-color;
@@ -266,17 +267,12 @@ main.main {
         transition: 0.25s all;
         border-radius: 300px;
         border: 1px solid $primary-color;
+        color: $primary-color;
 
-        a {
-          color: $primary-color;
-        }
 
         &:hover {
           background: $blue-color;
           border-color: $blue-color;
-        }
-
-        &:hover a {
           color: $secondary-color;
         }
 
@@ -554,8 +550,8 @@ main.main {
             }
 
             &__answer {
-              .questions-box-item-list {
-                .questions-box-item-list-element {
+              ul {
+                li {
                   font-size: 1rem;
                   line-height: 140%;
                 }

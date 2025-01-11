@@ -43,6 +43,12 @@ main.main {
         &.disabled {
           opacity: 40%;
         }
+
+        &.active {
+          background: $blue-color;
+          border-color: $secondary-color;
+          color: $secondary-color;
+        }
       }
     }
 
@@ -155,6 +161,16 @@ main.main {
 
           &.disabled {
             opacity: 50%;
+            pointer-events: none;
+
+            &:hover {
+              background: transparent;
+              border-color: $primary-color;
+            }
+
+            &:hover .button-arrow-icon {
+              filter: none;
+            }
           }
         }
 

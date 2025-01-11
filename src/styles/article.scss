@@ -295,18 +295,12 @@ main.main {
         transition: 0.25s all;
         border-radius: 300px;
         border: 1px solid $primary-color;
-
-        a {
-          color: $primary-color;
-          transition: 0.25s all;
-        }
+        display: inline-block;
+        color: $primary-color;
 
         &:hover{
           background: $blue-color;
           border-color: $blue-color;
-        }
-
-        &:hover a{
           color: $secondary-color;
         }
 

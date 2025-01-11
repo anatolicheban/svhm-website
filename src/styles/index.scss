@@ -47,6 +47,7 @@ main.main {
         margin-top: 55px;
         border-radius: 300px;
         border: 1px solid $secondary-color;
+        display: inline-block;
 
         &:hover {
           background: $secondary-color;
@@ -138,13 +139,10 @@ main.main {
               margin-top: 49px;
               border-radius: 300px;
               border: 1px solid $primary-color;
+              display: inline-block;
+              color: $primary-color;
 
-              a {
-                transition: 0.25s all;
-                color: $primary-color;
-              }
-
-              &:hover a {
+              &:hover {
                 color: $secondary-color;
               }
 
