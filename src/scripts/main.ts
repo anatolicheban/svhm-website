@@ -90,7 +90,7 @@ const name = document.getElementById('name') as HTMLInputElement;
 const phone = document.getElementById('phone') as HTMLInputElement;
 const question = document.getElementById('question') as HTMLTextAreaElement;
 const messageBox = document.querySelector('.contacts-message-box') as HTMLElement;
-const courseTitleElement = document.querySelector('.hero-section-info__title') as HTMLElement;
+const courseTitleElement = document.querySelector('.hero-section-info__title') as HTMLElement || null;
 const courseTitle = courseTitleElement ? courseTitleElement.textContent.trim() : '';
 
 function showMessage(message: string, type: 'error' | 'success'): void {
