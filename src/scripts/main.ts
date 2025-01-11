@@ -91,7 +91,7 @@ const phone = document.getElementById('phone') as HTMLInputElement;
 const question = document.getElementById('question') as HTMLTextAreaElement;
 const messageBox = document.querySelector('.contacts-message-box') as HTMLElement;
 const courseTitleElement = document.querySelector('.hero-section-info__title') as HTMLElement
-const courseTitle = courseTitleElement ? courseTitleElement!.textContent.trim() : '';
+const courseTitle = courseTitleElement?.textContent?.trim() || '';
 
 function showMessage(message: string, type: 'error' | 'success'): void {
   const messageElement = document.createElement('div');
