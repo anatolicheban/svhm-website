@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>All Courses</title>
-  <script type="module" crossorigin src="/svhm-website/assets/main-D-Bt8-1U.js"></script>
+  <script type="module" crossorigin src="/svhm-website/assets/main-CpxIb2q3.js"></script>
   <link rel="stylesheet" crossorigin href="/svhm-website/assets/main-B3S2p52K.css">
 </head>
 <body class="transition-disabled">
@@ -172,7 +172,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact-us">
+        <section id="contact-us" class="contact-us">
             <div class="container">
                 <div class="contacts-left-side">
                     <h2 class="contacts-left-side__title">ЗАЦІКАВИЛИ?</h2>
@@ -194,10 +194,28 @@
                         <label for="phone">
                             <input
                                     class="contacts-form__item"
-                                    name="name"
+                                    name="phone"
                                     id="phone"
                                     type="text"
                                     placeholder="+38 (000) 000 00 00"
+                            />
+                        </label>
+                        <label for="email">
+                            <input
+                                    class="contacts-form__item"
+                                    name="email"
+                                    id="email"
+                                    type="email"
+                                    placeholder="Ваша емейл-адреса"
+                            />
+                        </label>
+                        <label for="telegram">
+                            <input
+                                    class="contacts-form__item"
+                                    name="telegram"
+                                    id="telegram"
+                                    type="text"
+                                    placeholder="Ваш Telegram"
                             />
                         </label>
                         <label for="question">
@@ -207,7 +225,7 @@
                           cols="1"
                           id="question"
                           name="question"
-                          placeholder="Ваше питання"
+                          placeholder="Ваш коментар"
                   ></textarea>
                         </label>
                         <input
@@ -216,6 +234,9 @@
                                 type="submit"
                         />
                     </form>
+                    <div class="contacts-message-box">
+                    
+                    </div>
                 </div>
             </div>
         </section>
@@ -229,7 +250,7 @@
                                     class="newsletter-form__email"
                                     placeholder="Email Address"
                                     type="email"
-                                    id="email"
+                                    id="email-news"
                                     name="email"
                             />
                         </label>
