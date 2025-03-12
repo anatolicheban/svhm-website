@@ -18,7 +18,7 @@ html,
 body {
   height: 100%;
   font-family: "Proba Pro", sans-serif;
-  overflow: auto;
+  overflow: visible;
 
   &.transition-disabled {
     * {
@@ -26,6 +26,7 @@ body {
     }
   }
 }
+
 
 a {
   text-decoration: none;
@@ -52,6 +53,8 @@ button {
 }
 
 header.header {
+  position: fixed;
+  z-index: 100;
   background-color: $primary-color;
   display: flex;
   width: 100%;
@@ -242,11 +245,11 @@ main.main {
     .container {
       display: flex;
       flex-direction: column;
-      gap: 110px;
+      gap: 70px;
     }
 
     &__title {
-      margin-top: 110px;
+      margin-top: 208px;
       color: $primary-color;
       font-size: 3.375rem;
       line-height: 59.4px;
@@ -323,7 +326,7 @@ main.main {
               word-wrap: break-word;
               overflow-wrap: break-word;
               hyphens: auto;
-              font-size: 3.375rem;
+              font-size: 3rem;
               line-height: 59.4px;
               font-weight: 700;
               color: $secondary-color;
@@ -377,7 +380,7 @@ main.main {
             &__text {
               max-width: 537px;
               width: 100%;
-              font-size: 1.5rem;
+              font-size: 1.7rem;
               line-height: 34px;
               color: $primary-color;
             }
@@ -757,6 +760,7 @@ main.main {
       .speakers-box-item {
         display: flex;
         flex-direction: column;
+        width: 100%;
         border: 1px solid $primary-color;
         border-radius: 30px;
         background: transparent;
@@ -1326,6 +1330,18 @@ footer.footer {
     display: flex;
     justify-content: space-between;
 
+    .left-side {
+      .social-links {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+
+        &__item {
+          display: block;
+        }
+      }
+    }
+
     .right-side {
       display: flex;
       gap: 120px;
@@ -1360,15 +1376,6 @@ footer.footer {
                 color: $secondary-color;
               }
             }
-          }
-        }
-
-        .social-links {
-          display: flex;
-          gap: 20px;
-
-          &__item {
-            display: block;
           }
         }
       }
@@ -1551,7 +1558,7 @@ footer.footer {
       .container {
         display: flex;
         flex-direction: column;
-        gap: 80px;
+        gap: 50px;
 
         .courses {
           .courses-list {
@@ -2012,7 +2019,7 @@ footer.footer {
                 padding-bottom: 30px;
 
                 &__text {
-                  font-size: 1rem;
+                  font-size: 1.2rem;
                   line-height: 140%;
                 }
               }

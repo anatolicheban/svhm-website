@@ -1,7 +1,7 @@
 main.main {
 
   .hero-section-article {
-    padding: 90px 0;
+    padding: 218px 0 90px 0;
     background: $primary-color;
     position: relative;
     overflow: hidden;
@@ -406,7 +406,7 @@ main.main {
 
   main.main {
     .hero-section-article {
-      padding: 60px 0;
+      padding: 201px 0 60px 0;
 
       .container {
         .hero-section-info {
@@ -432,6 +432,13 @@ main.main {
 
 
 @media (max-width: 600px) {
+
+  main.main {
+    .hero-section-article {
+      padding: 171px 0 40px 0;
+    }
+  }
+
   header.header {
     .container {
       .bottom-header {
@@ -446,7 +453,6 @@ main.main {
 
   main.main {
     .hero-section-article {
-      padding: 40px 0;
       .container {
         .hero-section-info {
           &__title {

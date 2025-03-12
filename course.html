@@ -61,7 +61,7 @@
             <div class="container">
                 <div class="hero-section-info">
                     <span class="hero-section-info__lessons">12 відео уроків</span>
-                    <h1 class="hero-section-info__title">НАЗВА КУРСУ</h1>
+                    <h1 class="hero-section-info__title hero-section-course-title">НАЗВА КУРСУ</h1>
                     <p class="hero-section-info__text">Інтенсивні та практичні курси для швидкого професійного зростання в маркетингу.</p>
                     <a href="#contact-us" class="hero-section-info__button">ЗАПИСАТИСЬ НА КУРС</a>
                 </div>
@@ -289,6 +289,24 @@
                                     placeholder="+38 (000) 000 00 00"
                             />
                         </label>
+                        <label for="email">
+                            <input
+                                    class="contacts-form__item"
+                                    name="email"
+                                    id="email"
+                                    type="email"
+                                    placeholder="Ваша емейл-адреса"
+                            />
+                        </label>
+                        <label for="telegram">
+                            <input
+                                    class="contacts-form__item"
+                                    name="telegram"
+                                    id="telegram"
+                                    type="text"
+                                    placeholder="Ваш телеграм"
+                            />
+                        </label>
                         <label for="question">
                   <textarea
                           class="contacts-form__item"
@@ -296,7 +314,7 @@
                           cols="1"
                           id="question"
                           name="question"
-                          placeholder="Ваше питання"
+                          placeholder="Ваш коментар"
                   ></textarea>
                         </label>
                         <input
@@ -316,12 +334,12 @@
                 <div class="newsletter-box">
                     <h2 class="newsletter-box__title">ПІДПИШИСЬ НА РОЗСИЛКУ</h2>
                     <form class="newsletter-form">
-                        <label for="email">
+                        <label for="email-news">
                             <input
                                     class="newsletter-form__email"
                                     placeholder="Email Address"
                                     type="email"
-                                    id="email"
+                                    id="email-news"
                                     name="email"
                             />
                         </label>

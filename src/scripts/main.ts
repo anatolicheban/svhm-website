@@ -87,11 +87,15 @@ toastr.options = {
 };
 
 const name = document.getElementById('name') as HTMLInputElement;
-const phone = document.getElementById('phone') as HTMLInputElement;
 const question = document.getElementById('question') as HTMLTextAreaElement;
+const phone = document.getElementById('phone') as HTMLInputElement;
+const email = document.getElementById('email') as HTMLInputElement;
+const telegram = document.getElementById('telegram') as HTMLInputElement;
 const messageBox = document.querySelector('.contacts-message-box') as HTMLElement;
-const courseTitleElement = document.querySelector('.hero-section-info__title') as HTMLElement
+const courseTitleElement = document.querySelector('.hero-section-course-title') as HTMLElement
 const courseTitle = courseTitleElement?.textContent?.trim() || '';
+const eventTitleElement = document.querySelector('.hero-section-event-title') as HTMLElement
+const eventTitle = eventTitleElement?.textContent?.trim() || '';
 
 function showMessage(message: string, type: 'error' | 'success'): void {
   const messageElement = document.createElement('div');
@@ -109,6 +113,8 @@ function showMessage(message: string, type: 'error' | 'success'): void {
 function validateForm(): boolean {
   name.classList.remove('error');
   phone.classList.remove('error');
+  email.classList.remove('error');
+  telegram.classList.remove('error');
   question.classList.remove('error');
 
   let isValid = true;
@@ -119,10 +125,33 @@ function validateForm(): boolean {
     isValid = false;
   }
 
+  const isContactProvided = email.value || phone.value || telegram.value;
+  if (!isContactProvided) {
+      showMessage("Необхідно ввести хоча б один контакт: телефон, емейл або телеграм.", 'error');
+      email.classList.add('error');
+      phone.classList.add('error');
+      telegram.classList.add('error');
+      isValid = false;
+  }
+
+
   const phoneRegex = /^(\+38|8)?0[0-9]{9}$/;
-  if (!phoneRegex.test(phone.value)) {
+  if (phone.value && !phoneRegex.test(phone.value)) {
     phone.classList.add('error');
     showMessage("Введіть коректний номер телефону", 'error');
+    isValid = false;
+  }
+
+  const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  if (email.value && !emailRegex.test(email.value)) {
+    email.classList.add('error');
+    showMessage("Введіть коректну емайл-адресу", 'error');
+    isValid = false;
+  }
+
+  if (telegram.value.length > 0 && telegram.value.length < 5) {
+    showMessage("Введіть телеграм", 'error');
+    name.classList.add('error');
     isValid = false;
   }
 
@@ -140,28 +169,35 @@ form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
 
   if (validateForm()) {
-    sendMessageToTelegram(name.value, phone.value, question.value, courseTitle);
+    sendMessageToTelegram(name.value, phone.value, email.value, telegram.value, question.value, courseTitle, eventTitle);
     name.value = '';
     phone.value = '';
     question.value = '';
+    email.value = '';
+    telegram.value = '';
   }
 });
 
-async function sendMessageToTelegram(name: string, phone: string, question: string, courseName: string): Promise<void> {
+async function sendMessageToTelegram(name: string, phone: string, email: string, telegram: string, question: string, courseName: string, eventName: string): Promise<void> {
     const botToken = '';
     const chatId = '';
     const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-    const message = `
-    📝 Новий запит з форми:
-    
-    ${courseName ? `📚 Курс: ${courseName}` : ''}
-    👤 Ім'я: ${name}
-    📞 Телефон: ${phone}
-    ❓ Питання: ${question}
-  `;
+    const message = [
+        '📝 Новий запит з форми:\n',
+        courseName ? `📚 Курс: ${courseName}` : null,
+        eventName ? `📚 Івент: ${eventName}` : null,
+        `👤 Ім'я: ${name}`,
+        phone ? `📞 Телефон: ${phone}` : '📞 Телефон: -',
+        email ? `📧 Email: ${email}` : '📧 Email: -',
+        telegram ? `💬 Telegram: ${telegram}` : '💬 Telegram: -',
+        `❓ Питання: ${question}`
+    ]
+        .filter(Boolean)
+        .join('\n');
 
     try {
+
         const response = await fetch(telegramApiUrl, {
             method: 'POST',
             headers: {
@@ -174,7 +210,7 @@ async function sendMessageToTelegram(name: string, phone: string, question: stri
         });
 
         if (!response.ok) {
-            throw new Error('Не вдалося надіслати повідомлення до Telegram.');
+            throw new Error('Не вдалося надіслати повідомлення');
         }
 
         showMessage("Запит надіслано!", 'success');

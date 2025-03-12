@@ -1,8 +1,9 @@
 main.main {
 
   .hero-section {
-    padding: 90px 0;
+    padding: 158px 0 90px 0;
     background: $primary-color;
+    overflow: hidden;
 
     &__hidden-content {
       opacity: 0;
@@ -334,7 +335,7 @@ main.main {
   .stairs {
     position: relative;
     width: 100%;
-    height: 814px;
+    min-height: 814px;
     overflow: hidden;
 
     .container {
@@ -347,9 +348,9 @@ main.main {
       z-index: 1;
 
       .grid {
-        top: 80px;
+        top: 30px;
         display: grid;
-        position: absolute;
+        gap: 70px 0;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         z-index: 100;
@@ -359,6 +360,7 @@ main.main {
           flex-direction: column;
           gap: 30px;
           max-width: 645px;
+          padding-bottom: 20px;
           width: 100%;
           color: $primary-color;
 
@@ -400,8 +402,8 @@ main.main {
         .grid-item-second {
           color: $secondary-color;
           max-width: 482px;
-          width: 100%;
-          margin-top: 20px;
+          width: max-content;
+          margin-top: 60px;
           margin-left: 150px;
         }
       }
@@ -411,7 +413,8 @@ main.main {
         top: 0;
         left: 0;
         width: 100%;
-        height: 814px;
+        height: 100%;
+        min-height: 814px;
         z-index: 0;
 
         .step {
@@ -468,39 +471,6 @@ main.main {
 
 }
 
-
-@media (max-width: 1320px) {
-  main.main {
-
-    .stairs {
-      .container {
-
-      }
-      .stairs-content {
-        .grid {
-          gap: 10px;
-          .grid-item {
-            &__title {
-            }
-            &__text {
-            }
-            .grid-item-list {
-              &__item {
-
-              }
-            }
-          }
-
-          .grid-item-second {
-
-            margin-left: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 1280px) {
   main.main {
 
@@ -541,7 +511,7 @@ main.main {
 
     .hero-section {
       overflow: hidden;
-      padding: 60px 0;
+      padding: 151px 0 60px 0;
 
       .container {
         justify-content: start;
@@ -606,13 +576,12 @@ main.main {
     }
 
     .stairs {
-      height: 935px;
+      min-height: 935px;
       .container {
 
       }
       .stairs-content {
         .grid {
-          top: 70px;
           grid-template-rows: auto auto;
           .grid-item {
             &__title {
@@ -627,8 +596,9 @@ main.main {
           }
 
           .grid-item-second {
-            margin-top: 80px;
+            margin-top: 180px;
             grid-column: 2;
+            margin-left: 70px;
           }
 
           .top-right {
@@ -642,7 +612,7 @@ main.main {
         }
 
         .steps {
-          height: 935px;
+          min-height: 935px;
 
           .step {
 
@@ -705,7 +675,7 @@ main.main {
 
       .stairs-content {
         .grid {
-          top: 40px;
+          top: 0;
           .grid-item {
             &__title {
             }
@@ -721,7 +691,7 @@ main.main {
           }
 
           .grid-item-second {
-            margin-top: 80px;
+            margin-top: 110px;
             grid-column: 2;
           }
 
@@ -769,7 +739,6 @@ main.main {
         .grid {
           top: 0;
           .grid-item {
-            gap: 15px;
             &__title {
             }
 
@@ -837,6 +806,37 @@ main.main {
   }
 }
 
+@media (max-width: 640px) {
+
+
+  main.main {
+
+    .stairs {
+      padding-top: 20px;
+      .stairs-content {
+        .grid {
+          .grid-item {
+            &__title {
+            }
+            &__text {
+            }
+            .grid-item-list {
+              &__item {
+              }
+            }
+          }
+          .grid-item-second {
+          }
+          .top-right {
+          }
+          .top-left {
+            margin-top: -20px;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 600px) {
 
@@ -844,8 +844,8 @@ main.main {
 
 
     .hero-section {
-      overflow: visible;
-      padding: 40px 0;
+      overflow: hidden;
+      padding: 131px 0 40px 0;
 
       &__hidden-content {
         display: none;
@@ -972,13 +972,12 @@ main.main {
     }
 
     .stairs {
-      height: 637px;
+      min-height: 637px;
       .container {
 
       }
       .stairs-content {
         .grid {
-          top: 70px;
           .grid-item {
             gap: 15px;
             &__title {
@@ -1000,7 +999,8 @@ main.main {
           }
 
           .grid-item-second {
-            margin-top: 90px;
+            max-width: 300px;
+            margin-top: 180px;
           }
 
           .top-right {
@@ -1012,7 +1012,7 @@ main.main {
         }
 
         .steps {
-          height: 637px;
+          min-height: 637px;
 
           .step {
 
@@ -1106,10 +1106,11 @@ main.main {
       }
       .stairs-content {
         .grid {
-          top: 10px;
+          top: 0;
 
           .grid-item-second {
-            margin-top: 20px;
+            margin-top: 100px;
+            margin-left: 95px;
           }
 
           .top-left {
@@ -1143,7 +1144,7 @@ main.main {
         .right-side {
           position: absolute;
           top: 15%;
-          right: -50px;
+          right: -70px;
 
           img {
             max-width: 145px;
@@ -1152,6 +1153,23 @@ main.main {
             height: 100%;
           }
         }
+      }
+    }
+
+    .stairs {
+      .container {
+
+      }
+      .stairs-content {
+        .grid {
+          top: 0;
+
+          .grid-item-second {
+            max-width: 200px;
+            margin-left: 90px;
+          }
+        }
+
       }
     }
   }

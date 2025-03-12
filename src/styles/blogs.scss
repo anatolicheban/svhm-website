@@ -1,7 +1,7 @@
 main.main {
 
   .blogs-blog {
-    padding: 110px 0 90px 0;
+    padding: 208px 0 90px 0;
 
     .container {
       display: flex;
@@ -21,7 +21,7 @@ main.main {
       display: flex;
       gap: 25px;
       align-items: center;
-      margin-top: 110px;
+      margin-top: 70px;
 
       &__button {
         font-size: 1.5rem;
@@ -209,10 +209,10 @@ main.main {
 @media (max-width: 1280px) {
   main.main {
     .blogs-blog {
-      padding: 80px 0;
+      padding: 198px 0 80px 0;
       .container {
         .buttons-box {
-          margin-top: 80px;
+          margin-top: 50px;
         }
 
         .blog-box {
@@ -287,7 +287,7 @@ main.main {
   main.main {
     .blogs-blog {
 
-      padding: 40px 0;
+      padding: 131px 0 40px 0;
 
       &__title {
         font-size: 2.25rem;
@@ -296,7 +296,7 @@ main.main {
 
       .container {
         .buttons-box {
-          margin-top: 40px;
+          margin-top: 30px;
           gap: 15px;
         }
 
